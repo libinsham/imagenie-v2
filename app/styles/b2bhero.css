@@ -1,0 +1,805 @@
+/* =========================================================
+   B2B HERO — FULL SECTION
+========================================================= */
+
+.b2b-hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+
+  background: #000;
+  color: #fff;
+}
+
+
+/* =========================================================
+   VIDEO BACKGROUND
+========================================================= */
+
+.b2b-hero__video {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 0;
+  overflow: hidden;
+}
+
+.b2b-hero__video video {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  display: block;
+}
+
+
+/* =========================================================
+   FULL BLACK OVERLAY
+   Covers the ENTIRE hero section
+========================================================= */
+
+.b2b-hero__overlay {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 1;
+
+  background: rgba(0, 0, 0, 0.82);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   HERO CONTAINER
+========================================================= */
+
+.b2b-hero__container {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+
+  padding: 110px 9% 80px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   CONTENT
+   NO BLACK PANEL HERE
+========================================================= */
+
+.b2b-hero__content {
+  position: relative;
+
+  z-index: 3;
+
+  width: 100%;
+  max-width: 1250px;
+
+  padding: 0;
+
+  background: transparent !important;
+
+  border: 0;
+  border-radius: 0;
+
+  box-shadow: none;
+}
+
+
+/* Remove any old pseudo-element panel */
+
+.b2b-hero__content::before,
+.b2b-hero__content::after {
+  content: none !important;
+  display: none !important;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.b2b-hero__eyebrow {
+  display: block;
+
+  margin: 0 0 24px;
+
+  color: #f5a400;
+
+  font-size: 16px;
+  line-height: 1.2;
+
+  font-weight: 600;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   H1
+========================================================= */
+
+.b2b-hero__title {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 0 28px;
+
+  color: #fff;
+
+  font-size: clamp(56px, 6vw, 96px);
+
+  line-height: 0.98;
+
+  font-weight: 500;
+
+  letter-spacing: -3px;
+
+  white-space: normal;
+}
+
+
+/* =========================================================
+   SUBTITLE
+========================================================= */
+
+.b2b-hero__subtitle {
+  width: 100%;
+  max-width: 800px;
+
+  margin: 0 0 30px;
+
+  color: #fff;
+
+  font-size: clamp(22px, 2vw, 38px);
+
+  line-height: 1.18;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.b2b-hero__description {
+  width: 100%;
+  max-width: 1050px;
+
+  margin: 0 0 38px;
+
+  color: #fff;
+
+  font-size: clamp(17px, 1.35vw, 23px);
+
+  line-height: 1.55;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.b2b-hero__actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.b2b-hero__button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 64px;
+
+  padding: 0 36px;
+
+  border: 1px solid #fff;
+
+  background: transparent;
+
+  color: #fff;
+
+  text-decoration: none;
+
+  font-size: 18px;
+
+  line-height: 1;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.b2b-hero__button:hover {
+  background: #fff;
+
+  color: #000;
+
+  border-color: #fff;
+}
+
+
+
+/* ===========================================
+   B2B HERO (Desktop)
+=========================================== */
+
+.b2b-hero{
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+color: white;
+    background-image:
+      linear-gradient(
+        90deg,
+        rgba(0,0,0,.92) 0%,
+        rgba(0,0,0,.82) 35%,
+        rgba(0,0,0,.55) 65%,
+        rgba(0,0,0,.25) 100%
+      ),
+      url("/images/banners/b2b-hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+
+  .b2b-hero {
+    min-height: 90vh;
+  }
+
+  .b2b-hero__container {
+    min-height: 90vh;
+
+    padding: 100px 6% 70px;
+  }
+
+  .b2b-hero__content {
+    padding: 0;
+
+    background: transparent !important;
+  }
+
+  .b2b-hero__title {
+    font-size: clamp(52px, 7vw, 76px);
+
+    letter-spacing: -2.5px;
+  }
+
+  .b2b-hero__subtitle {
+    font-size: 24px;
+  }
+
+  .b2b-hero__description {
+    font-size: 18px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .b2b-hero {
+    width: 100%;
+
+    min-height: 100svh;
+
+    overflow: hidden;
+  }
+
+  
+/*==================================================
+B2B HERO
+==================================================*/
+
+  .b2b-hero__overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,.35),
+        rgba(0,0,0,0)
+    );
+}
+
+
+.o-container{
+    overflow:visible;
+     position:relative;
+}
+
+.b2b-hero__content{
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    background: transparent !important;
+    border: 0;
+    box-shadow: none;
+  
+}
+
+
+
+
+.b2b-hero__eyebrow{
+    display:inline-block;
+    margin-bottom:20px;
+    color:#ED6E47;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-size:14px;
+    font-weight:700;
+}
+
+.b2b-hero h1{
+    color:#fff;
+    font-size:clamp(60px,8vw,100px);
+    line-height:.95;
+    margin-bottom:24px;
+}
+
+.b2b-hero__subtitle{
+    color:#fff;
+    font-size:30px;
+    margin-bottom:25px;
+}
+
+.b2b-hero__description {
+  max-width: 720px    !important;
+  width: 100%   !important;;
+  font-family: MontLight, sans-serif;
+  line-height: 1.8;
+}
+
+.b2b-hero__actions{
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+
+  /* -----------------------------------------
+     VIDEO
+  ----------------------------------------- */
+
+  .b2b-hero__video {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+  }
+
+  .b2b-hero__video video {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center center;
+  }
+
+
+  /* -----------------------------------------
+     FULL BLACK MOBILE OVERLAY
+  ----------------------------------------- */
+
+  .b2b-hero__overlay {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.82);
+  }
+
+
+  /* -----------------------------------------
+     CONTAINER
+  ----------------------------------------- */
+
+  .b2b-hero__container {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    min-height: 100svh;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 90px 20px 55px;
+
+    box-sizing: border-box;
+  }
+
+
+  /* -----------------------------------------
+     CONTENT
+     NO BOX / NO PANEL
+  ----------------------------------------- */
+
+  .b2b-hero__content {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    background: transparent !important;
+    border: 0;
+    box-shadow: none;
+  }
+
+
+  /* VERY IMPORTANT:
+     Prevent old black panel from appearing
+  */
+
+  .b2b-hero__content::before,
+  .b2b-hero__content::after {
+    content: none !important;
+
+    display: none !important;
+
+    background: transparent !important;
+  }
+
+
+  /* -----------------------------------------
+     EYEBROW
+  ----------------------------------------- */
+
+  .b2b-hero__eyebrow {
+    margin: 0 0 18px;
+
+    font-size: 13px;
+
+    line-height: 1.2;
+
+    letter-spacing: 2.2px;
+  }
+
+
+  /* -----------------------------------------
+     H1
+  ----------------------------------------- */
+
+  .b2b-hero__title {
+    width: 100%;
+    max-width: 100%;
+
+    margin: 0 0 22px;
+
+    color: #fff;
+
+    font-size: 46px;
+
+    line-height: 0.98;
+
+    font-weight: 500;
+
+    letter-spacing: -1.8px;
+
+    white-space: normal;
+
+    word-break: normal;
+
+    overflow-wrap: normal;
+  }
+
+
+  /* If title contains spans */
+
+  .b2b-hero__title span {
+    display: block;
+  }
+
+
+  /* -----------------------------------------
+     SUBTITLE
+  ----------------------------------------- */
+
+  .b2b-hero__subtitle {
+    width: 100%;
+    max-width: 100%;
+
+    margin: 0 0 24px;
+
+    color: #fff;
+
+    font-size: 22px;
+
+    line-height: 1.3;
+
+    font-weight: 400;
+  }
+
+
+  /* -----------------------------------------
+     DESCRIPTION
+  ----------------------------------------- */
+
+  .b2b-hero__description {
+    width: 100%;
+    max-width: 100%;
+
+    margin: 0 0 30px;
+
+    color: #fff;
+
+    font-size: 16px;
+
+    line-height: 1.55;
+
+    font-weight: 400;
+  }
+
+
+  /* -----------------------------------------
+     ACTIONS
+  ----------------------------------------- */
+
+  .b2b-hero__actions {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+  }
+
+
+  /* -----------------------------------------
+     BUTTON
+  ----------------------------------------- */
+
+  .b2b-hero__button {
+    min-height: 54px;
+
+    padding: 0 25px;
+
+    font-size: 16px;
+  }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .b2b-hero {
+    min-height: 100svh;
+  }
+
+
+  .b2b-hero__container {
+    min-height: 100svh;
+
+    padding: 82px 20px 45px;
+  }
+
+
+  .b2b-hero__content {
+    padding: 0;
+
+    background: transparent !important;
+  }
+
+
+  /* -----------------------------------------
+     EYEBROW
+  ----------------------------------------- */
+
+  .b2b-hero__eyebrow {
+    margin-bottom: 16px;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+  }
+
+
+  /* -----------------------------------------
+     H1
+  ----------------------------------------- */
+
+  .b2b-hero__title {
+    font-size: 42px;
+
+    line-height: 0.98;
+
+    letter-spacing: -1.5px;
+
+    margin-bottom: 20px;
+  }
+
+
+  /* -----------------------------------------
+     SUBTITLE
+  ----------------------------------------- */
+
+  .b2b-hero__subtitle {
+    font-size: 20px;
+
+    line-height: 1.3;
+
+    margin-bottom: 22px;
+  }
+
+
+  /* -----------------------------------------
+     DESCRIPTION
+  ----------------------------------------- */
+
+  .b2b-hero__description {
+    font-size: 15px;
+
+    line-height: 1.5;
+
+    margin-bottom: 26px;
+  }
+
+
+  /* -----------------------------------------
+     BUTTON
+  ----------------------------------------- */
+
+  .b2b-hero__button {
+    width: auto;
+
+    min-height: 52px;
+
+    padding: 0 22px;
+
+    font-size: 15px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 375px) {
+
+  .b2b-hero__container {
+    padding: 78px 18px 40px;
+  }
+
+
+  .b2b-hero__content {
+    padding: 0;
+  }
+
+
+  .b2b-hero__eyebrow {
+    font-size: 11px;
+
+    letter-spacing: 1.8px;
+  }
+
+
+  .b2b-hero__title {
+    font-size: 39px;
+
+    letter-spacing: -1.3px;
+  }
+
+
+  .b2b-hero__subtitle {
+    font-size: 19px;
+  }
+
+
+  .b2b-hero__description {
+    font-size: 14px;
+  }
+
+
+  .b2b-hero__button {
+    min-height: 50px;
+
+    padding: 0 20px;
+
+    font-size: 14px;
+  }
+}
+
+
+/* =========================================================
+   LANDSCAPE MOBILE
+========================================================= */
+
+@media (max-width: 767px) and (orientation: landscape) {
+
+  .b2b-hero {
+    min-height: 100svh;
+  }
+
+  .b2b-hero__container {
+    min-height: 100svh;
+
+    align-items: flex-start;
+
+    padding-top: 90px;
+
+    padding-bottom: 40px;
+  }
+
+  .b2b-hero__title {
+    font-size: 42px;
+  }
+
+  .b2b-hero__subtitle {
+    font-size: 20px;
+  }
+
+  .b2b-hero__description {
+    font-size: 15px;
+
+    max-width: 700px;
+  }
+}

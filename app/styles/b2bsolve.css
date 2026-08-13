@@ -1,0 +1,846 @@
+/* =========================================================
+   CHALLENGES WE SOLVE
+   B2B PROBLEMS SECTION
+========================================================= */
+
+.problems-section {
+  position: relative;
+  width: 100%;
+  min-height: auto;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 20% 75%,
+      rgba(238, 154, 33, 0.14),
+      transparent 25%
+    ),
+    #08090a;
+
+  color: #fff;
+
+  padding: 90px 0;
+}
+
+
+/* =========================================================
+   BACKGROUND CIRCLE
+========================================================= */
+
+.problems-background-circle {
+  position: absolute;
+
+  width: 680px;
+  height: 680px;
+
+  left: -300px;
+  bottom: -300px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(238, 154, 33, 0.22);
+
+  background:
+    radial-gradient(
+      circle at 55% 70%,
+      rgba(238, 154, 33, 0.20),
+      rgba(238, 154, 33, 0.035) 45%,
+      transparent 72%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   ORANGE GLOW
+========================================================= */
+
+.problems-glow {
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  left: -120px;
+  bottom: -230px;
+
+  border-radius: 50%;
+
+  background: rgba(238, 154, 33, 0.10);
+
+  filter: blur(90px);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.problems-container {
+  position: relative;
+  z-index: 5;
+
+  width: min(1250px, calc(100% - 100px));
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(330px, 0.8fr)
+    minmax(500px, 1.15fr);
+
+  gap: 60px;
+
+  align-items: center;
+}
+
+
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+.problems-intro {
+  position: relative;
+  z-index: 5;
+
+  padding: 0;
+}
+
+
+.problems-eyebrow {
+  display: block;
+
+  margin-bottom: 24px;
+
+  color: #ee9a21;
+
+  font-family: MontLight, sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  letter-spacing: 5px;
+
+  line-height: 1.2;
+
+  text-transform: uppercase;
+}
+
+
+.problems-title {
+  margin: 0;
+
+  color: #fff;
+
+  font-family: MontLight, sans-serif;
+
+  font-size: clamp(58px, 5.2vw, 78px);
+
+  font-weight: 400;
+
+  line-height: 0.98;
+
+  letter-spacing: -2.5px;
+}
+
+
+.problems-title span {
+  color: #ee9a21;
+}
+
+
+.problems-line {
+  width: 105px;
+
+  height: 3px;
+
+  margin: 34px 0 25px;
+
+  background: #ee9a21;
+}
+
+
+.problems-description {
+  max-width: 390px;
+
+  margin: 0;
+
+  color: #c7c7c7;
+
+  font-family: MontLight, sans-serif;
+
+  font-size: 19px;
+
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   RIGHT SIDE LIST
+========================================================= */
+
+.problems-list {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+
+/* =========================================================
+   VERTICAL CONNECTOR
+========================================================= */
+
+.problems-connector {
+  position: absolute;
+
+  left: -23px;
+
+  top: 22px;
+  bottom: 22px;
+
+  width: 1px;
+
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.28) 0,
+      rgba(255, 255, 255, 0.28) 3px,
+      transparent 3px,
+      transparent 7px
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   PROBLEM ROW
+========================================================= */
+
+.problem-row {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  width: 100%;
+}
+
+
+/* =========================================================
+   ORANGE NODE
+========================================================= */
+
+.problem-node {
+  position: absolute;
+
+  left: -28px;
+
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #ee9a21;
+
+  box-shadow:
+    0 0 0 3px rgba(238, 154, 33, 0.04),
+    0 0 10px rgba(238, 154, 33, 0.30);
+
+  z-index: 4;
+}
+
+
+/* =========================================================
+   HORIZONTAL CONNECTOR
+========================================================= */
+
+.problem-node::after {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+  left: 8px;
+
+  width: 22px;
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.22);
+}
+
+
+/* =========================================================
+   PROBLEM CARD
+========================================================= */
+
+.problem-card {
+  width: 100%;
+
+  min-height: 82px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 22px;
+
+  padding: 10px 24px 10px 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.14);
+
+  border-radius: 23px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.045),
+      rgba(255, 255, 255, 0.018)
+    );
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.02);
+
+  backdrop-filter: blur(10px);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
+.problem-card:hover {
+  transform: translateX(4px);
+
+  border-color: rgba(238, 154, 33, 0.40);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(238, 154, 33, 0.07),
+      rgba(255, 255, 255, 0.02)
+    );
+}
+
+
+/* =========================================================
+   PROBLEM ICON
+========================================================= */
+
+.problem-icon {
+  flex: 0 0 54px;
+
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(238, 154, 33, 0.45);
+
+  border-radius: 50%;
+
+  color: #fff;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(238, 154, 33, 0.05),
+      rgba(0, 0, 0, 0.12)
+    );
+
+  box-shadow:
+    inset 0 0 18px rgba(238, 154, 33, 0.025);
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+/* =========================================================
+   ICON HOVER
+========================================================= */
+
+.problem-card:hover .problem-icon {
+  background: #ee9a21;
+
+  color: #000;
+
+  transform: scale(1.04);
+}
+
+
+.problem-icon svg {
+  width: 25px;
+  height: 25px;
+}
+
+
+/* =========================================================
+   PROBLEM TEXT
+========================================================= */
+
+.problem-text {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: #f2f2f2;
+
+  font-family: MontLight, sans-serif;
+
+  font-size: 18px;
+
+  line-height: 1.4;
+
+  font-weight: 400;
+}
+
+
+.problem-text span {
+  color: #ee9a21;
+}
+
+
+/* =========================================================
+   MOUNTAIN / BOTTOM VISUAL
+========================================================= */
+
+.problems-mountain {
+  position: absolute;
+
+  left: -90px;
+  bottom: -145px;
+
+  width: 590px;
+  height: 270px;
+
+  z-index: 2;
+
+  opacity: 0.72;
+
+  transform: rotate(-8deg);
+
+  background:
+    linear-gradient(
+      135deg,
+      #050505 20%,
+      #171717 48%,
+      #050505 70%
+    );
+
+  clip-path: polygon(
+    0 100%,
+    8% 82%,
+    18% 88%,
+    30% 63%,
+    40% 75%,
+    52% 48%,
+    62% 67%,
+    73% 43%,
+    82% 62%,
+    100% 35%,
+    100% 100%
+  );
+
+  filter:
+    drop-shadow(
+      0 -5px 10px rgba(238, 154, 33, 0.16)
+    );
+}
+
+
+.problems-mountain::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    repeating-linear-gradient(
+      125deg,
+      transparent 0,
+      transparent 12px,
+      rgba(238, 154, 33, 0.12) 13px,
+      transparent 15px
+    );
+
+  opacity: 0.55;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (max-width: 1400px) {
+
+  .problems-container {
+    width: min(1180px, calc(100% - 80px));
+
+    grid-template-columns:
+      minmax(300px, 0.78fr)
+      minmax(480px, 1.15fr);
+
+    gap: 55px;
+  }
+
+  .problems-title {
+    font-size: 68px;
+  }
+
+  .problem-card {
+    min-height: 82px;
+  }
+
+  .problem-text {
+    font-size: 18px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET / SMALL DESKTOP
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .problems-section {
+    padding: 80px 0;
+  }
+
+  .problems-container {
+    width: min(950px, calc(100% - 60px));
+
+    grid-template-columns:
+      minmax(270px, 0.72fr)
+      minmax(420px, 1.2fr);
+
+    gap: 45px;
+  }
+
+  .problems-title {
+    font-size: 56px;
+  }
+
+  .problems-eyebrow {
+    font-size: 13px;
+
+    letter-spacing: 4px;
+  }
+
+  .problems-description {
+    font-size: 18px;
+  }
+
+  .problems-list {
+    gap: 9px;
+  }
+
+  .problem-card {
+    min-height: 78px;
+
+    gap: 18px;
+
+    padding: 9px 18px 9px 14px;
+
+    border-radius: 21px;
+  }
+
+  .problem-icon {
+    flex: 0 0 52px;
+
+    width: 52px;
+    height: 52px;
+  }
+
+  .problem-icon svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .problem-text {
+    font-size: 17px;
+  }
+
+  .problems-connector {
+    left: -22px;
+  }
+
+  .problem-node {
+    left: -27px;
+  }
+
+  .problem-node::after {
+    width: 21px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .problems-section {
+    padding: 80px 0 85px;
+  }
+
+  .problems-container {
+    width: min(700px, calc(100% - 50px));
+
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+  }
+
+  .problems-intro {
+    max-width: 600px;
+  }
+
+  .problems-title {
+    font-size: 64px;
+  }
+
+  .problems-description {
+    max-width: 500px;
+  }
+
+  .problems-list {
+    margin-left: 28px;
+
+    gap: 10px;
+  }
+
+  .problems-connector {
+    left: -22px;
+  }
+
+  .problem-node {
+    left: -27px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .problems-section {
+    padding: 65px 0 75px;
+  }
+
+  .problems-container {
+    width: calc(100% - 32px);
+
+    gap: 45px;
+  }
+
+  .problems-eyebrow {
+    font-size: 11px;
+
+    letter-spacing: 3.5px;
+
+    margin-bottom: 20px;
+  }
+
+  .problems-title {
+    font-size: 50px;
+
+    letter-spacing: -1.5px;
+  }
+
+  .problems-line {
+    width: 78px;
+
+    height: 2px;
+
+    margin: 27px 0 22px;
+  }
+
+  .problems-description {
+    font-size: 17px;
+
+    line-height: 1.55;
+  }
+
+  .problems-list {
+    margin-left: 20px;
+
+    gap: 10px;
+  }
+
+  .problems-connector {
+    left: -21px;
+
+    top: 22px;
+    bottom: 22px;
+  }
+
+  .problem-node {
+    left: -25px;
+
+    width: 8px;
+    height: 8px;
+  }
+
+  .problem-node::after {
+    left: 8px;
+
+    width: 18px;
+  }
+
+  .problem-card {
+    min-height: 76px;
+
+    gap: 14px;
+
+    padding: 10px 13px;
+
+    border-radius: 19px;
+  }
+
+  .problem-icon {
+    flex: 0 0 48px;
+
+    width: 48px;
+    height: 48px;
+  }
+
+  .problem-icon svg {
+    width: 23px;
+    height: 23px;
+  }
+
+  .problem-text {
+    font-size: 15.5px;
+
+    line-height: 1.4;
+  }
+
+  .problems-background-circle {
+    width: 500px;
+    height: 500px;
+
+    left: -330px;
+    bottom: -250px;
+  }
+
+  .problems-glow {
+    width: 350px;
+    height: 350px;
+
+    left: -150px;
+    bottom: -220px;
+  }
+
+  .problems-mountain {
+    width: 440px;
+    height: 200px;
+
+    left: -140px;
+    bottom: -125px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .problems-section {
+    padding: 55px 0 65px;
+  }
+
+  .problems-container {
+    width: calc(100% - 24px);
+
+    gap: 38px;
+  }
+
+  .problems-title {
+    font-size: 43px;
+  }
+
+  .problems-description {
+    font-size: 16px;
+  }
+
+  .problems-list {
+    margin-left: 17px;
+
+    gap: 8px;
+  }
+
+  .problems-connector {
+    left: -19px;
+
+    top: 20px;
+    bottom: 20px;
+  }
+
+  .problem-card {
+    min-height: 70px;
+
+    padding: 9px 11px;
+
+    gap: 11px;
+
+    border-radius: 17px;
+  }
+
+  .problem-icon {
+    flex: 0 0 44px;
+
+    width: 44px;
+    height: 44px;
+  }
+
+  .problem-icon svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  .problem-text {
+    font-size: 14.5px;
+  }
+
+  .problem-node {
+    left: -23px;
+  }
+
+  .problem-node::after {
+    width: 15px;
+  }
+
+}

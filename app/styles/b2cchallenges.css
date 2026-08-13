@@ -1,0 +1,637 @@
+/* =========================================================
+   B2C CHALLENGES WE ADDRESS
+========================================================= */
+
+.b2c-problems-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+
+  background: #ffffff;
+  color: #111111;
+
+  padding: 100px 0 120px;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.b2c-problems-section .problems-container {
+  position: relative;
+  z-index: 5;
+
+  width: min(1400px, calc(100% - 120px));
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(380px, 0.8fr)
+    minmax(600px, 1.5fr);
+
+  gap: 80px;
+
+  align-items: center;
+}
+
+
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+.b2c-problems-section .problems-intro {
+  position: relative;
+  z-index: 5;
+
+  padding-left: 0;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.b2c-problems-section .problems-eyebrow {
+  display: block;
+
+  margin-bottom: 30px;
+
+  color: #ee9a21;
+
+  font-family: MontLight, sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 5px;
+
+  line-height: 1.4;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.b2c-problems-section .problems-title {
+  display: block;
+
+  width: 100%;
+
+  margin: 0;
+
+  color: #111111;
+
+  font-family: MontLight, sans-serif;
+
+  font-size: clamp(64px, 6vw, 64px);
+
+  font-weight: 700;
+
+  line-height: 0.98;
+
+  letter-spacing: -3px;
+}
+
+
+/* ORANGE TITLE WORD */
+
+.b2c-problems-section .problems-title span {
+  color: #ee9a21;
+}
+
+
+/* =========================================================
+   ORANGE LINE
+========================================================= */
+
+.b2c-problems-section .problems-line {
+  width: 110px;
+
+  height: 3px;
+
+  margin: 38px 0 28px;
+
+  background: #ee9a21;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.b2c-problems-section .problems-description {
+  max-width: 400px;
+
+  margin: 0;
+
+  color: #555b63;
+
+  font-family: MontLight, sans-serif;
+
+  font-size: 20px;
+
+  font-weight: 400;
+
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   RIGHT SIDE LIST
+========================================================= */
+
+.b2c-problems-section .problems-list {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+
+/* =========================================================
+   VERTICAL CONNECTOR
+========================================================= */
+
+.b2c-problems-section .problems-connector {
+  position: absolute;
+
+  left: -30px;
+
+  top: 30px;
+
+  bottom: 30px;
+
+  width: 1px;
+
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(17, 24, 39, 0.28) 0,
+      rgba(17, 24, 39, 0.28) 3px,
+      transparent 3px,
+      transparent 8px
+    );
+}
+
+
+/* =========================================================
+   PROBLEM ROW
+========================================================= */
+
+.b2c-problems-section .problem-row {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  width: 100%;
+}
+
+
+/* =========================================================
+   ORANGE NODE
+========================================================= */
+
+.b2c-problems-section .problem-node {
+  position: absolute;
+
+  left: -36px;
+
+  width: 10px;
+
+  height: 10px;
+
+  border-radius: 50%;
+
+  background: #ee9a21;
+
+  box-shadow:
+    0 0 0 4px rgba(238, 154, 33, 0.08),
+    0 0 12px rgba(238, 154, 33, 0.22);
+
+  z-index: 5;
+}
+
+
+/* =========================================================
+   HORIZONTAL CONNECTOR
+========================================================= */
+
+.b2c-problems-section .problem-node::after {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+
+  left: 10px;
+
+  width: 20px;
+
+  height: 1px;
+
+  background: rgba(17, 24, 39, 0.28);
+}
+
+
+/* =========================================================
+   PROBLEM CARD
+========================================================= */
+
+.b2c-problems-section .problem-card {
+  width: 100%;
+
+  min-height: 102px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 26px;
+
+  padding: 15px 30px 15px 18px;
+
+  border: 1px solid #dedede;
+
+  border-radius: 28px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.04);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
+.b2c-problems-section .problem-card:hover {
+  transform: translateX(5px);
+
+  border-color: rgba(238, 154, 33, 0.55);
+
+  background: #fffdfa;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.b2c-problems-section .problem-icon {
+  flex: 0 0 68px;
+
+  width: 68px;
+
+  height: 68px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: 1px solid rgba(238, 154, 33, 0.65);
+
+  border-radius: 50%;
+
+  color: #222222;
+
+  background: #ffffff;
+
+  box-shadow:
+    inset 0 0 20px rgba(238, 154, 33, 0.035);
+}
+
+
+/* ICON SVG */
+
+.b2c-problems-section .problem-icon svg {
+  width: 30px;
+
+  height: 30px;
+}
+
+
+/* =========================================================
+   PROBLEM TEXT
+========================================================= */
+
+.b2c-problems-section .problem-text {
+  flex: 1;
+
+  max-width: 720px;
+
+  color: #24272c;
+
+  font-family: MontLight, sans-serif;
+
+  font-size: 20px;
+
+  font-weight: 700;
+
+  line-height: 1.4;
+}
+
+
+/* ORANGE HIGHLIGHT */
+
+.b2c-problems-section .problem-text span {
+  color: #ee9a21;
+}
+
+
+/* =========================================================
+   OPTIONAL BOTTOM VISUAL
+   Keep this hidden for the clean white B2C version.
+========================================================= */
+
+.b2c-problems-section .problems-mountain {
+  display: none;
+}
+
+
+/* =========================================================
+   LARGE TABLET
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .b2c-problems-section {
+    padding: 90px 0 100px;
+  }
+
+  .b2c-problems-section .problems-container {
+    width: calc(100% - 80px);
+
+    grid-template-columns:
+      minmax(330px, 0.75fr)
+      minmax(500px, 1.35fr);
+
+    gap: 60px;
+  }
+
+  .b2c-problems-section .problems-title {
+    font-size: 70px;
+  }
+
+  .b2c-problems-section .problem-text {
+    font-size: 18px;
+  }
+
+  .b2c-problems-section .problem-card {
+    min-height: 94px;
+
+    gap: 20px;
+  }
+
+  .b2c-problems-section .problem-icon {
+    flex: 0 0 62px;
+
+    width: 62px;
+
+    height: 62px;
+  }
+
+  .b2c-problems-section .problem-icon svg {
+    width: 27px;
+
+    height: 27px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+  .b2c-problems-section {
+    padding: 80px 0 90px;
+  }
+
+  .b2c-problems-section .problems-container {
+    width: calc(100% - 60px);
+
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+  }
+
+  .b2c-problems-section .problems-intro {
+    max-width: 650px;
+  }
+
+  .b2c-problems-section .problems-title {
+    font-size: 70px;
+  }
+
+  .b2c-problems-section .problems-list {
+    margin-left: 30px;
+  }
+}
+
+
+/* =========================================================
+   SMALL TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .b2c-problems-section {
+    padding: 70px 0 80px;
+  }
+
+  .b2c-problems-section .problems-container {
+    width: calc(100% - 40px);
+
+    gap: 50px;
+  }
+
+  .b2c-problems-section .problems-eyebrow {
+    font-size: 13px;
+
+    letter-spacing: 4px;
+  }
+
+  .b2c-problems-section .problems-title {
+    font-size: 62px;
+
+    letter-spacing: -2px;
+  }
+
+  .b2c-problems-section .problems-description {
+    font-size: 18px;
+  }
+
+  .b2c-problems-section .problem-text {
+    font-size: 17px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .b2c-problems-section {
+    padding: 60px 0 75px;
+  }
+
+  .b2c-problems-section .problems-container {
+    width: calc(100% - 30px);
+
+    gap: 45px;
+  }
+
+  .b2c-problems-section .problems-eyebrow {
+    margin-bottom: 20px;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+  }
+
+  .b2c-problems-section .problems-title {
+    font-size: 50px;
+
+    letter-spacing: -2px;
+
+    line-height: 1;
+  }
+
+  .b2c-problems-section .problems-line {
+    width: 85px;
+
+    height: 3px;
+
+    margin: 28px 0 22px;
+  }
+
+  .b2c-problems-section .problems-description {
+    max-width: 100%;
+
+    font-size: 17px;
+
+    line-height: 1.5;
+  }
+
+  .b2c-problems-section .problems-list {
+    margin-left: 20px;
+
+    gap: 12px;
+  }
+
+  .b2c-problems-section .problems-connector {
+    left: -22px;
+
+    top: 25px;
+
+    bottom: 25px;
+  }
+
+  .b2c-problems-section .problem-node {
+    left: -27px;
+
+    width: 8px;
+
+    height: 8px;
+  }
+
+  .b2c-problems-section .problem-node::after {
+    left: 8px;
+
+    width: 18px;
+  }
+
+  .b2c-problems-section .problem-card {
+    min-height: 86px;
+
+    gap: 15px;
+
+    padding: 12px;
+
+    border-radius: 22px;
+  }
+
+  .b2c-problems-section .problem-icon {
+    flex: 0 0 52px;
+
+    width: 52px;
+
+    height: 52px;
+  }
+
+  .b2c-problems-section .problem-icon svg {
+    width: 24px;
+
+    height: 24px;
+  }
+
+  .b2c-problems-section .problem-text {
+    font-size: 15px;
+
+    line-height: 1.4;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .b2c-problems-section .problems-title {
+    font-size: 44px;
+  }
+
+  .b2c-problems-section .problem-card {
+    gap: 12px;
+
+    padding: 10px;
+  }
+
+  .b2c-problems-section .problem-icon {
+    flex: 0 0 46px;
+
+    width: 46px;
+
+    height: 46px;
+  }
+
+  .b2c-problems-section .problem-icon svg {
+    width: 21px;
+
+    height: 21px;
+  }
+
+  .b2c-problems-section .problem-text {
+    font-size: 14px;
+  }
+}

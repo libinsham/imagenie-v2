@@ -1,0 +1,681 @@
+/* ============================================================
+   IMAGENIE — RESEARCH & WRITING PAGE
+   Completely isolated styles
+   ============================================================ */
+
+
+/* ============================================================
+   PAGE
+   ============================================================ */
+
+.research-writing-page {
+  width: 100%;
+
+  margin: 0;
+
+  padding-top: 50px;
+
+  background: #ffffff;
+
+  color: #111111;
+
+  box-sizing: border-box;
+}
+
+
+/* ============================================================
+   MAIN SECTION
+   ============================================================ */
+
+.research-writing-section {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: 32% 68%;
+
+  min-height: 100vh;
+
+  box-sizing: border-box;
+}
+
+
+/* ============================================================
+   LEFT ORANGE PANEL
+   ============================================================ */
+
+.research-writing-left {
+  position: relative;
+
+  min-height: 100vh;
+
+  padding: 45px 7% 55px;
+
+  background: linear-gradient(
+    180deg,
+    #f7b51c 0%,
+    #f7931e 100%
+  );
+
+  display: flex;
+
+  flex-direction: column;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+}
+
+
+/* Decorative circle */
+
+.research-writing-left::after {
+  content: "";
+
+  position: absolute;
+
+  width: 520px;
+  height: 520px;
+
+  right: -260px;
+  bottom: -270px;
+
+  border: 1px solid rgba(0, 0, 0, 0.15);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+
+/* ============================================================
+   IMAGE
+   ============================================================ */
+
+.research-writing-image-wrap {
+  width: 250px;
+  height: 250px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 30px;
+
+  position: relative;
+
+  z-index: 2;
+
+  flex-shrink: 0;
+}
+
+
+.research-writing-image {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+
+/* ============================================================
+   PAGE NUMBER
+   ============================================================ */
+
+.research-writing-number {
+  position: relative;
+
+  z-index: 2;
+
+  display: block;
+
+  margin-top: 5px;
+
+  margin-bottom: 20px;
+
+  color: #111111;
+
+  font-size: 14px;
+
+  line-height: 1;
+
+  font-weight: 700;
+}
+
+
+/* ============================================================
+   TITLE
+   ============================================================ */
+
+.research-writing-title {
+  position: relative;
+
+  z-index: 2;
+
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(
+    54px,
+    4.8vw,
+    92px
+  );
+
+  line-height: 0.88;
+
+  letter-spacing: -0.055em;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+}
+
+
+/* ============================================================
+   DESCRIPTION
+   ============================================================ */
+
+.research-writing-description {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 440px;
+
+  margin: 38px 0 0;
+
+  color: #ffffff;
+
+  font-size: 19px;
+
+  line-height: 1.5;
+
+  font-weight: 400;
+}
+
+
+/* ============================================================
+   RIGHT PANEL
+   ============================================================ */
+
+.research-writing-right {
+  width: 100%;
+
+  min-width: 0;
+
+  background: #ffffff;
+
+  box-sizing: border-box;
+}
+
+
+/* ============================================================
+   RIGHT CONTENT
+
+   NAVIGATION | DIVIDER | FAQ
+   ============================================================ */
+
+.research-writing-content {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(250px, 36%)
+    1px
+    minmax(0, 64%);
+
+  padding: 42px 5vw 65px;
+
+  box-sizing: border-box;
+
+  min-height: 100%;
+}
+
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+
+.research-writing-nav {
+  min-width: 0;
+
+  padding-right: 45px;
+
+  box-sizing: border-box;
+}
+
+
+.research-writing-nav-list {
+  list-style: none;
+
+  padding: 0;
+  margin: 0;
+}
+
+
+.research-writing-nav-item {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 12px;
+
+  margin-bottom: 30px;
+
+  color: #a5a5a5;
+
+  font-size: 20px;
+
+  line-height: 1.25;
+
+  font-weight: 400;
+
+  transition: color 0.25s ease;
+}
+
+
+.research-writing-nav-item.active {
+  color: #111111;
+
+  font-weight: 600;
+}
+
+
+.research-writing-nav-number {
+  min-width: 38px;
+
+  color: #a5a5a5;
+
+  font-size: 18px;
+
+  font-weight: 500;
+}
+
+
+.research-writing-nav-item.active
+.research-writing-nav-number {
+  color: #f4a800;
+}
+
+
+/* ============================================================
+   DIVIDER
+   ============================================================ */
+
+.research-writing-divider {
+  width: 1px;
+
+  background: #d5d5d5;
+
+  min-height: 100%;
+
+  align-self: stretch;
+}
+
+
+/* ============================================================
+   FAQ
+   ============================================================ */
+
+.research-writing-faq {
+  min-width: 0;
+
+  padding-left: 55px;
+
+  box-sizing: border-box;
+}
+
+
+/* ============================================================
+   FAQ ITEM
+   ============================================================ */
+
+.research-writing-faq-item {
+  padding: 0 0 30px;
+
+  margin-bottom: 28px;
+
+  border-bottom: 1px solid #d0d0d0;
+}
+
+
+.research-writing-faq-item:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ============================================================
+   QUESTION
+   ============================================================ */
+
+.research-writing-faq-item h2 {
+  max-width: 700px;
+
+  margin: 0 0 25px;
+
+  color: #111111;
+
+  font-size: 20px;
+
+  line-height: 1.2;
+
+  font-weight: 700;
+
+  letter-spacing: -0.015em;
+}
+
+
+/* ============================================================
+   ANSWER
+   ============================================================ */
+
+.research-writing-faq-item p {
+  max-width: 700px;
+
+  margin: 0;
+
+  color: #303030;
+
+  font-size: 18px;
+
+  line-height: 1.42;
+
+  font-weight: 400;
+}
+
+
+/* ============================================================
+   LARGE DESKTOP
+   ============================================================ */
+
+@media (min-width: 1600px) {
+
+  .research-writing-content {
+    padding-left: 4vw;
+    padding-right: 4vw;
+  }
+
+
+  .research-writing-nav {
+    padding-right: 55px;
+  }
+
+
+  .research-writing-faq {
+    padding-left: 60px;
+  }
+
+
+  .research-writing-faq-item h2 {
+    font-size: 21px;
+  }
+
+
+  .research-writing-faq-item p {
+    font-size: 19px;
+  }
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 1100px) {
+
+  .research-writing-section {
+    grid-template-columns: 34% 66%;
+  }
+
+
+  .research-writing-left {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+
+  .research-writing-image-wrap {
+    width: 210px;
+    height: 210px;
+  }
+
+
+  .research-writing-title {
+    font-size: clamp(
+      48px,
+      5.3vw,
+      75px
+    );
+  }
+
+
+  .research-writing-description {
+    font-size: 17px;
+  }
+
+
+  .research-writing-content {
+    grid-template-columns:
+      minmax(210px, 38%)
+      1px
+      minmax(0, 62%);
+
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+
+  .research-writing-nav {
+    padding-right: 30px;
+  }
+
+
+  .research-writing-nav-item {
+    font-size: 17px;
+  }
+
+
+  .research-writing-faq {
+    padding-left: 35px;
+  }
+
+
+  .research-writing-faq-item h2 {
+    font-size: 18px;
+  }
+
+
+  .research-writing-faq-item p {
+    font-size: 16px;
+  }
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+  .research-writing-section {
+    display: block;
+
+    min-height: auto;
+  }
+
+
+  /* LEFT */
+
+  .research-writing-left {
+    min-height: auto;
+
+    padding: 45px 28px 55px;
+  }
+
+
+  .research-writing-left::after {
+    width: 350px;
+    height: 350px;
+
+    right: -180px;
+    bottom: -180px;
+  }
+
+
+  .research-writing-image-wrap {
+    width: 190px;
+    height: 190px;
+
+    margin-bottom: 30px;
+  }
+
+
+  .research-writing-number {
+    margin-bottom: 18px;
+  }
+
+
+  .research-writing-title {
+    font-size: clamp(
+      48px,
+      14vw,
+      78px
+    );
+
+    line-height: 0.9;
+  }
+
+
+  .research-writing-description {
+    max-width: 500px;
+
+    margin-top: 30px;
+
+    font-size: 17px;
+
+    line-height: 1.5;
+  }
+
+
+  /* RIGHT */
+
+  .research-writing-content {
+    display: block;
+
+    padding: 45px 28px 60px;
+  }
+
+
+  .research-writing-nav {
+    padding-right: 0;
+
+    margin-bottom: 40px;
+  }
+
+
+  .research-writing-nav-item {
+    margin-bottom: 20px;
+
+    font-size: 17px;
+  }
+
+
+  .research-writing-divider {
+    width: 100%;
+    height: 1px;
+
+    min-height: 1px;
+
+    margin-bottom: 40px;
+  }
+
+
+  .research-writing-faq {
+    padding-left: 0;
+  }
+
+
+  .research-writing-faq-item {
+    padding-bottom: 30px;
+
+    margin-bottom: 30px;
+  }
+
+
+  .research-writing-faq-item h2 {
+    font-size: 19px;
+
+    line-height: 1.25;
+  }
+
+
+  .research-writing-faq-item p {
+    font-size: 16px;
+
+    line-height: 1.5;
+  }
+}
+
+
+/* ============================================================
+   SMALL MOBILE
+   ============================================================ */
+
+@media (max-width: 480px) {
+
+  .research-writing-left {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+
+  .research-writing-content {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+
+  .research-writing-image-wrap {
+    width: 160px;
+    height: 160px;
+  }
+
+
+  .research-writing-title {
+    font-size: 52px;
+  }
+
+
+  .research-writing-description {
+    font-size: 16px;
+  }
+
+
+  .research-writing-nav-item {
+    font-size: 16px;
+
+    gap: 8px;
+  }
+
+
+  .research-writing-nav-number {
+    min-width: 32px;
+
+    font-size: 15px;
+  }
+
+
+  .research-writing-faq-item h2 {
+    font-size: 18px;
+  }
+
+
+  .research-writing-faq-item p {
+    font-size: 15px;
+  }
+}

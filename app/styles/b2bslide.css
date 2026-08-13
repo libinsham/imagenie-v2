@@ -1,0 +1,555 @@
+/* =========================================================
+   B2B CASE SLIDE
+   Matches: B2BCaseSlide.jsx
+========================================================= */
+
+.b2b-case-slide {
+  width: 100%;
+  padding: 100px 0;
+  overflow: hidden;
+
+  background: #111111;
+  color: #ffffff;
+}
+
+.b2b-case-slide-container {
+  width: min(1380px, calc(100% - 80px));
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.b2b-case-slide-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 50px;
+  margin-bottom: 55px;
+}
+
+.b2b-case-slide-header > div {
+  min-width: 0;
+}
+
+.b2b-case-slide-eyebrow {
+  display: block;
+
+  margin-bottom: 16px;
+
+  color: #f5a623;
+
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.2;
+
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.b2b-case-slide-header h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(42px, 5vw, 68px);
+  font-weight: 500;
+  line-height: 0.98;
+
+  letter-spacing: -2.5px;
+}
+
+.b2b-case-slide-header p {
+  max-width: 620px;
+
+  margin: 22px 0 0;
+
+  color: #999999;
+
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   VIEW ALL
+========================================================= */
+
+.b2b-case-slide-view-all {
+  flex-shrink: 0;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 22px;
+
+  border: 1px solid #444444;
+
+  color: #ffffff;
+
+  font-size: 12px;
+  line-height: 1;
+
+  text-decoration: none;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.b2b-case-slide-view-all:hover {
+  background: #f5a623;
+  border-color: #f5a623;
+  color: #000000;
+}
+
+
+/* =========================================================
+   FOUR COLUMN GRID
+========================================================= */
+
+.b2b-case-slide-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 18px;
+
+  width: 100%;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.b2b-case-slide-card {
+  position: relative;
+
+  min-width: 0;
+
+  overflow: hidden;
+
+  background: #1a1a1a;
+
+  border: 1px solid #292929;
+  border-radius: 12px;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.b2b-case-slide-card:hover {
+  transform: translateY(-5px);
+
+  border-color: #3a3a3a;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================================
+   IMAGE SLIDER
+========================================================= */
+
+.b2b-case-slide-image {
+  position: relative;
+
+  width: 100%;
+  height: 430px;
+
+  min-height: 0;
+  max-height: 430px;
+
+  overflow: hidden;
+
+  background: #151515;
+}
+
+
+/* =========================================================
+   INDIVIDUAL SLIDES
+========================================================= */
+
+.b2b-case-slide-image-item {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: scale(1.02);
+
+  transition:
+    opacity 0.6s ease,
+    transform 0.8s ease,
+    visibility 0.6s ease;
+}
+
+.b2b-case-slide-image-item.is-active {
+  z-index: 1;
+
+  opacity: 1;
+  visibility: visible;
+
+  transform: scale(1);
+}
+
+
+/* =========================================================
+   NEXT IMAGE / NEXT.JS IMAGE
+========================================================= */
+
+.b2b-case-slide-image-item img {
+  position: absolute;
+
+  inset: 0;
+
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  max-width: none;
+  max-height: none;
+
+  object-fit: cover;
+}
+
+
+/* =========================================================
+   IMAGE DARK OVERLAY
+========================================================= */
+
+.b2b-case-slide-image::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 2;
+
+  pointer-events: none;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 45%,
+    rgba(0, 0, 0, 0.45) 100%
+  );
+}
+
+
+/* =========================================================
+   ARROWS
+========================================================= */
+
+.b2b-case-slide-arrow {
+  position: absolute;
+
+  top: 50%;
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 38px;
+
+  padding: 0;
+
+  transform: translateY(-50%);
+
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.45);
+
+  color: #ffffff;
+
+  font-size: 15px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  opacity: 0;
+
+  transition:
+    opacity 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.b2b-case-slide-card:hover .b2b-case-slide-arrow {
+  opacity: 1;
+}
+
+.b2b-case-slide-arrow:hover {
+  background: #f5a623;
+  border-color: #f5a623;
+
+  color: #000000;
+}
+
+.b2b-case-slide-arrow--prev {
+  left: 14px;
+}
+
+.b2b-case-slide-arrow--next {
+  right: 14px;
+}
+
+
+/* =========================================================
+   DOTS
+========================================================= */
+
+.b2b-case-slide-dots {
+  position: absolute;
+
+  left: 50%;
+  bottom: 16px;
+
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  transform: translateX(-50%);
+}
+
+.b2b-case-slide-dot {
+  width: 7px;
+  height: 7px;
+
+  padding: 0;
+
+  border: 0;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.55);
+
+  cursor: pointer;
+
+  transition:
+    width 0.25s ease,
+    background 0.25s ease;
+}
+
+.b2b-case-slide-dot.is-active {
+  width: 20px;
+
+  border-radius: 10px;
+
+  background: #f5a623;
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.b2b-case-slide-content {
+  min-height: 185px;
+
+  padding: 24px 24px 28px;
+
+  background: #1a1a1a;
+}
+
+.b2b-case-slide-category {
+  display: block;
+
+  margin-bottom: 11px;
+
+  color: #f5a623;
+
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.2;
+
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.b2b-case-slide-content h3 {
+  margin: 0 0 10px;
+
+  color: #ffffff;
+
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.15;
+
+  letter-spacing: -0.4px;
+}
+
+.b2b-case-slide-content p {
+  margin: 0 0 22px;
+
+  color: #8f8f8f;
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.b2b-case-slide-link {
+  display: inline-block;
+
+  color: #ffffff;
+
+  font-size: 12px;
+  line-height: 1;
+
+  text-decoration: none;
+
+  transition: color 0.25s ease;
+}
+
+.b2b-case-slide-link:hover {
+  color: #f5a623;
+}
+
+
+/* =========================================================
+   LARGE TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .b2b-case-slide {
+    padding: 80px 0;
+  }
+
+  .b2b-case-slide-container {
+    width: calc(100% - 50px);
+  }
+
+  .b2b-case-slide-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+  }
+
+  .b2b-case-slide-image {
+    height: 400px;
+    max-height: 400px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .b2b-case-slide-header {
+    display: block;
+
+    margin-bottom: 40px;
+  }
+
+  .b2b-case-slide-header h2 {
+    font-size: 48px;
+  }
+
+  .b2b-case-slide-view-all {
+    margin-top: 25px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .b2b-case-slide {
+    padding: 60px 0;
+  }
+
+  .b2b-case-slide-container {
+    width: calc(100% - 30px);
+  }
+
+  .b2b-case-slide-header h2 {
+    font-size: 40px;
+
+    letter-spacing: -1.5px;
+  }
+
+  .b2b-case-slide-header p {
+    font-size: 15px;
+  }
+
+  .b2b-case-slide-grid {
+    grid-template-columns: 1fr;
+
+    gap: 24px;
+  }
+
+  .b2b-case-slide-image {
+    height: 400px;
+    max-height: 400px;
+  }
+
+  /* Show arrows on mobile */
+
+  .b2b-case-slide-arrow {
+    opacity: 1;
+  }
+
+  .b2b-case-slide-content {
+    padding: 22px 22px 26px;
+  }
+
+  .b2b-case-slide-content h3 {
+    font-size: 23px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .b2b-case-slide {
+    padding: 50px 0;
+  }
+
+  .b2b-case-slide-container {
+    width: calc(100% - 24px);
+  }
+
+  .b2b-case-slide-header h2 {
+    font-size: 36px;
+  }
+
+  .b2b-case-slide-image {
+    height: 340px;
+    max-height: 340px;
+  }
+
+}

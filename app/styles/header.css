@@ -1,0 +1,954 @@
+/* =========================================================
+   IMAGENIE HEADER
+   ========================================================= */
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.c-header {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  width: 100%;
+  height: 72px;
+
+  margin: 0;
+  padding: 0;
+
+  background: #000;
+  color: #fff;
+
+  z-index: 10000;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADER BACKGROUND
+   ========================================================= */
+
+.c-header__background {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: #000;
+
+  z-index: -1;
+}
+
+
+/* =========================================================
+   HEADER CONTAINER
+   ========================================================= */
+
+.c-header__container {
+  position: relative;
+
+  width: 100%;
+  height: 72px;
+
+  margin: 0;
+  padding: 0;
+
+  z-index: 10001;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADER CONTENT
+   ========================================================= */
+
+.c-header__content {
+  width: calc(100% - 120px);
+  max-width: 1760px;
+
+  height: 72px;
+
+  margin: 0 auto;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.c-header__branding {
+  display: flex;
+  align-items: center;
+
+  flex: 0 0 auto;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+.c-header__branding a {
+  display: flex;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+
+  text-decoration: none;
+}
+
+
+.c-header__branding img {
+  display: block;
+
+  width: 190px;
+  height: auto;
+
+  max-width: none;
+
+  margin: 0;
+  padding: 0;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   DESKTOP NAVIGATION
+   ========================================================= */
+
+.c-header__primary-nav {
+  display: flex;
+  align-items: center;
+
+  margin-left: auto;
+  margin-right: 35px;
+}
+
+
+.c-header__primary-nav ul {
+  display: flex;
+  align-items: center;
+
+  gap: 35px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+
+.c-header__primary-nav li {
+  margin: 0;
+  padding: 0;
+}
+
+
+.c-header__primary-nav a {
+  display: inline-block;
+
+  color: #fff;
+
+  font-size: 15px;
+  font-weight: 400;
+
+  line-height: 1.2;
+
+  text-decoration: none;
+}
+
+
+.c-header__primary-nav a:hover {
+  color: #ee9a21;
+}
+
+
+/* =========================================================
+   MENU BUTTON WRAPPER
+   ========================================================= */
+
+.c-header__burger {
+  position: relative;
+
+  z-index: 10003;
+
+  flex: 0 0 auto;
+
+  display: flex;
+  align-items: stretch;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   MENU BUTTON
+   ========================================================= */
+
+.c-header__burger__button {
+  appearance: none;
+  -webkit-appearance: none;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 165px;
+  height: 72px;
+
+  gap: 12px;
+
+  margin: 0;
+  padding: 0 24px;
+
+  border: 0;
+  border-radius: 0;
+  outline: none;
+
+  background: #151515;
+  color: #fff;
+
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 400;
+
+  line-height: 1;
+  text-align: center;
+
+  cursor: pointer;
+
+  box-shadow: none;
+
+  box-sizing: border-box;
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+.c-header__burger__button:hover {
+ background: #fff  !important; 
+  color: #000 !important;
+}
+
+
+/* =========================================================
+   HAMBURGER
+   ========================================================= */
+
+.c-header__hamburger {
+  position: relative;
+
+  display: block;
+
+  width: 28px;
+  height: 20px;
+
+  flex: 0 0 28px;
+
+  overflow: visible;
+}
+
+
+.c-header__hamburger span {
+  position: absolute;
+
+  left: 0;
+
+  display: block;
+
+  width: 28px;
+  height: 3px;
+
+  margin: 0;
+
+  background: #fff;
+
+  transition:
+    transform 0.25s ease,
+    opacity 0.2s ease;
+}
+
+
+.c-header__burger__button:hover
+.c-header__hamburger span {
+  background: #000;
+}
+
+.c-header.is-menu-open
+.c-header__burger__button {
+  background: #fff;
+  color: #000;
+}
+
+.c-header.is-menu-open
+.c-header__hamburger span {
+  background: #000;
+}
+
+/* Top line */
+
+.c-header__hamburger span:first-child {
+  top: 4px;
+}
+
+
+/* Bottom line */
+
+.c-header__hamburger span:last-child {
+  top: 14px;
+}
+
+
+/* =========================================================
+   MENU OPEN → X
+   ========================================================= */
+
+.c-header.is-menu-open
+.c-header__hamburger
+span:first-child {
+  top: 9px;
+
+  transform: rotate(45deg);
+}
+
+
+.c-header.is-menu-open
+.c-header__hamburger
+span:last-child {
+  top: 9px;
+
+  transform: rotate(-45deg);
+}
+
+
+/* =========================================================
+   MENU LABEL
+   ========================================================= */
+
+.c-header__menu-label {
+  display: inline-block;
+
+  color: inherit;
+
+  font-size: inherit;
+  font-weight: inherit;
+
+  line-height: 1;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   FULL SCREEN MENU
+   ========================================================= */
+
+.c-header__secondary-nav {
+  position: fixed;
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+
+  height: 100vh;
+  height: 100dvh;
+
+  margin: 0;
+  padding: 0;
+
+  background: #000;
+
+  z-index: 9998;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease;
+
+  box-sizing: border-box;
+}
+
+
+/* Open */
+
+.c-header__secondary-nav.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+
+/* =========================================================
+   MENU CONTENT
+   ========================================================= */
+
+.c-header__secondary-inner {
+  width: calc(100% - 160px);
+  max-width: 1720px;
+
+  min-height: 100vh;
+  min-height: 100dvh;
+
+  margin: 0 auto;
+
+    padding: 147px 135px 90px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   MAIN VERTICAL MENU
+   ========================================================= */
+
+.c-header__secondary-inner > .menu {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  justify-content: flex-start;
+
+  gap: 34px;
+
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+
+/* =========================================================
+   MENU ITEMS
+   ========================================================= */
+
+.c-header__secondary-inner > .menu > li {
+  display: block;
+
+  width: auto;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+
+/* =========================================================
+   MAIN MENU LINKS
+   ========================================================= */
+
+.c-header__secondary-inner > .menu > li > a,
+.c-header__secondary-inner > .menu > li > button {
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-start;
+
+  width: auto;
+
+  min-height: 0;
+
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+  border-radius: 0;
+
+  outline: none;
+
+  background: transparent;
+
+  color: #fff;
+
+  font-family: inherit;
+
+  font-size: 42px;
+  font-weight: 700;
+
+  line-height: 1.15;
+
+  text-align: left;
+  text-decoration: none;
+
+  cursor: pointer;
+
+  box-shadow: none;
+
+  transition: color 0.2s ease;
+}
+
+
+.c-header__secondary-inner > .menu > li > a:hover,
+.c-header__secondary-inner > .menu > li > button:hover {
+  color: #ee9a21;
+}
+
+
+/* =========================================================
+   SUBMENU BUTTON
+   ========================================================= */
+
+.menu-submenu-button {
+  gap: 15px;
+}
+
+
+.menu-arrow {
+  display: inline-block;
+
+  font-size: 0.8em;
+
+  transition: transform 0.2s ease;
+}
+
+
+.menu-submenu-button:hover .menu-arrow {
+  transform: translateX(4px);
+}
+
+
+/* =========================================================
+   SUB MENU
+   ========================================================= */
+
+.c-header__secondary-inner .sub-menu {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  min-height: 100%;
+
+  margin: 0;
+  padding: 145px 0 80px;
+
+  background: #000;
+
+  z-index: 20;
+
+  display: none;
+
+  box-sizing: border-box;
+}
+
+
+.c-header__secondary-inner .sub-menu.is-active {
+  display: block;
+}
+
+
+/* =========================================================
+   BACK
+   ========================================================= */
+
+.c-header__secondary-inner .is-back {
+  margin: 0 0 40px;
+  padding: 0;
+}
+
+
+.c-header__secondary-inner .is-back button {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+  color: #aaa;
+
+  font-family: inherit;
+  font-size: 18px;
+
+  cursor: pointer;
+}
+
+
+.c-header__secondary-inner .is-back button:hover {
+  color: #ee9a21;
+}
+
+
+/* =========================================================
+   SUB MENU LINKS
+   ========================================================= */
+
+.c-header__secondary-inner .sub-menu > li {
+  margin: 0 0 25px;
+  padding: 0;
+}
+
+
+.c-header__secondary-inner .sub-menu a {
+  color: #fff;
+
+  font-size: 27px;
+
+  line-height: 1.2;
+
+  text-decoration: none;
+}
+
+
+.c-header__secondary-inner .sub-menu a:hover {
+  color: #ee9a21;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   ========================================================= */
+
+@media (min-width: 1600px) {
+
+  .c-header {
+    height: 72px;
+  }
+
+  .c-header__container {
+    height: 72px;
+  }
+
+  .c-header__content {
+    width: calc(100% - 120px);
+  }
+
+  .c-header__branding img {
+    width: 195px;
+  }
+
+  .c-header__burger__button {
+    width: 175px;
+    height: 72px;
+  }
+
+  .c-header__secondary-inner {
+    width: calc(100% - 180px);
+padding-left: 100px;
+    padding-top: 150px;
+  }
+
+  .c-header__secondary-inner > .menu {
+    gap: 40px;
+  }
+
+  .c-header__secondary-inner > .menu > li > a,
+  .c-header__secondary-inner > .menu > li > button {
+    font-size: 46px;
+  }
+}
+
+
+/* =========================================================
+   LAPTOP
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+  .c-header__content {
+    width: calc(100% - 70px);
+  }
+
+  .c-header__branding img {
+    width: 175px;
+  }
+
+  .c-header__primary-nav {
+    margin-right: 25px;
+  }
+
+  .c-header__primary-nav ul {
+    gap: 25px;
+  }
+
+  .c-header__burger__button {
+    width: 145px;
+  }
+
+  .c-header__secondary-inner {
+    width: calc(100% - 120px);
+
+    padding-top: 125px;
+  }
+
+  .c-header__secondary-inner > .menu {
+    gap: 30px;
+  }
+
+  .c-header__secondary-inner > .menu > li > a,
+  .c-header__secondary-inner > .menu > li > button {
+    font-size: 30px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+  .c-header {
+    height: 64px;
+  }
+
+  .c-header__container {
+    height: 64px;
+  }
+
+  .c-header__content {
+    width: calc(100% - 32px);
+
+    height: 64px;
+  }
+
+  .c-header__branding img {
+    width: 165px;
+  }
+
+  .c-header__primary-nav {
+    display: none;
+  }
+
+  .c-header__burger__button {
+    width: 135px;
+    height: 64px;
+
+    font-size: 18px;
+  }
+
+  .c-header__secondary-inner {
+    width: calc(100% - 70px);
+
+    padding-top: 110px;
+    padding-bottom: 60px;
+  }
+
+  .c-header__secondary-inner > .menu {
+    gap: 32px;
+  }
+
+  .c-header__secondary-inner > .menu > li > a,
+  .c-header__secondary-inner > .menu > li > button {
+    font-size: 29px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .c-header {
+    height: 60px;
+  }
+
+  .c-header__container {
+    height: 60px;
+  }
+
+  .c-header__content {
+    width: calc(100% - 20px);
+
+    height: 60px;
+  }
+
+  .c-header__branding img {
+    width: 145px;
+  }
+
+  .c-header__burger__button {
+    width: 125px;
+    height: 60px;
+
+    padding: 0 16px;
+
+    gap: 9px;
+
+    font-size: 17px;
+  }
+
+  .c-header__hamburger {
+    width: 24px;
+    height: 20px;
+
+    flex-basis: 24px;
+  }
+
+  .c-header__hamburger span {
+    width: 24px;
+  }
+
+  .c-header__secondary-inner {
+    width: calc(100% - 36px);
+ padding-left: 25px;
+    padding-top: 95px;
+    padding-bottom: 50px;
+  }
+
+  .c-header__secondary-inner > .menu {
+    gap: 28px;
+  }
+
+  .c-header__secondary-inner > .menu > li > a,
+  .c-header__secondary-inner > .menu > li > button {
+    font-size: 30px;
+
+    line-height: 1.1;
+  }
+
+  .c-header__secondary-inner .sub-menu {
+    padding-top: 95px;
+     padding-left: 18px;
+  }
+
+  .c-header__secondary-inner .sub-menu a {
+    font-size: 23px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+  .c-header__content {
+    width: calc(100% - 12px);
+  }
+
+  .c-header__branding img {
+    width: 135px;
+  }
+
+  .c-header__burger__button {
+    width: 115px;
+
+    padding: 0 12px;
+
+    gap: 8px;
+
+    font-size: 16px;
+  }
+
+  .c-header__hamburger {
+    width: 22px;
+  }
+
+  .c-header__hamburger span {
+    width: 22px;
+  }
+
+  .c-header__secondary-inner {
+    width: calc(100% - 30px);
+
+    padding-top: 90px;
+  }
+
+  .c-header__secondary-inner > .menu {
+    gap: 22px;
+  }
+
+  .c-header__secondary-inner > .menu > li > a,
+  .c-header__secondary-inner > .menu > li > button {
+    font-size: 24px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 350px) {
+
+  .c-header__branding img {
+    width: 125px;
+  }
+
+  .c-header__burger__button {
+    width: 108px;
+
+    font-size: 15px;
+  }
+
+  .c-header__secondary-inner {
+    width: calc(100% - 24px);
+
+    padding-top: 85px;
+  }
+
+  .c-header__secondary-inner > .menu {
+    gap: 20px;
+  }
+
+  .c-header__secondary-inner > .menu > li > a,
+  .c-header__secondary-inner > .menu > li > button {
+    font-size: 22px;
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+.c-header__burger__button:focus-visible,
+.c-header__secondary-inner a:focus-visible,
+.c-header__secondary-inner button:focus-visible {
+  outline: 2px solid #ee9a21;
+  outline-offset: 4px;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .c-header__secondary-nav,
+  .c-header__burger__button,
+  .c-header__hamburger span,
+  .c-header__secondary-inner a,
+  .c-header__secondary-inner button {
+    transition: none;
+  }
+}

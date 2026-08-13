@@ -1,0 +1,1064 @@
+/* =========================================================
+   IMAGENIE HERO
+   ORIGINAL DESKTOP DESIGN
+   Responsive: Large Desktop / Desktop / Laptop / Tablet / Mobile
+   ========================================================= */
+
+
+/* =========================================================
+   HERO BASE
+   ========================================================= */
+
+.c-b-hero {
+ --header-height: 72px;
+
+  position: relative;
+  width: 100%;
+
+  min-height: 680px;
+
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+
+  background: #050b1b;
+  color: #fff;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BACKGROUND VIDEO
+   ========================================================= */
+
+.c-b-hero__video {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center center;
+
+  z-index: 0;
+
+  display: block;
+
+  pointer-events: none;
+
+  /* Flip the video horizontally (mirror left/right) */
+  transform: scaleX(-1);
+}
+
+
+/* =========================================================
+   VIDEO TINT
+   ========================================================= */
+
+.c-b-hero__video__tint {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 1;
+
+  /* Black overlay so text stays readable over the video */
+  background: rgba(0, 0, 0, 0.5);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   MAIN CONTENT CONTAINER
+   ========================================================= */
+
+.c-b-hero__container {
+  position: relative;
+  z-index: 2;
+
+  width: min(1760px, calc(100% - 160px));
+
+  min-height: 100%;
+
+  margin: 0 auto;
+
+  padding-top: calc(var(--header-height) + 30px);
+  padding-bottom: 125px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.c-b-hero__content {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+
+
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.c-b-hero__title {
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+ 
+}
+
+
+.c-b-hero__title h1 {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   MAIN HERO HEADING
+   ========================================================= */
+
+.c-b-hero__head-one {
+  display: block;
+
+  width: 100%;
+  max-width: 760px;
+
+  margin: 0;
+
+  color: #fff;
+
+  font-size: clamp(
+    62px,
+    4.65vw,
+    84px
+  );
+
+  font-weight: 500;
+
+  line-height: 0.98;
+
+  letter-spacing: -0.045em;
+
+  text-wrap: balance;
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.c-b-hero__intro {
+  width: 100%;
+  max-width: 760px;
+
+  margin-top: 34px;
+
+}
+
+
+.c-b-hero__intro p {
+  width: 100%;
+  max-width: 790px;
+
+  margin: 0;
+
+  color: #fff;
+
+  font-size: clamp(
+    18px,
+    1.15vw,
+    21px
+  );
+
+  font-weight: 400;
+
+  line-height: 1.46;
+
+  letter-spacing: -0.01em;
+}
+
+
+/* Second paragraph */
+
+.c-b-hero__intro p + p {
+  margin-top: 30px;
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.c-b-hero__buttons {
+  display: flex;
+
+  align-items: stretch;
+
+  width: fit-content;
+  max-width: 100%;
+
+  margin-top: 64px;
+
+  border: 1px solid rgba(255, 255, 255, 0.9);
+
+  box-sizing: border-box;
+}
+
+
+.c-b-hero__button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 192px;
+  height: 62px;
+
+  padding: 0 26px;
+
+  border: 0;
+  border-right: 1px solid rgba(255, 255, 255, 0.9);
+
+  background: transparent;
+
+  color: #fff;
+
+  font-family: inherit;
+
+  font-size: 18px;
+  font-weight: 500;
+
+  line-height: 1;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+
+.c-b-hero__button:last-child {
+  border-right: 0;
+}
+
+
+.c-b-hero__button:hover {
+  background: #fff;
+
+  color: #000;
+}
+
+
+/* =========================================================
+   CLIENT LOGOS
+   ========================================================= */
+
+.c-b-hero__logos {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 22px;
+  width: 100%;
+  z-index: 3;
+}
+
+
+.c-b-hero__logos-inner {
+  width: min(1600px, calc(100% - 140px));
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  gap: 20px;
+}
+
+
+.c-b-hero__logo {
+  flex: 1 1 0;
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.c-b-hero__logo img {
+  display: block;
+
+  width: auto;
+
+  max-width: 125px;
+  max-height: 58px;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   1600px+
+   ========================================================= */
+
+@media (min-width: 1600px) {
+
+  .c-b-hero {
+    --header-height: 72px;
+  }
+
+
+.c-b-hero__container {
+  width: min(
+    1760px,
+    calc(100% - 160px)
+  );
+
+  padding-top: calc(var(--header-height) + 185px);
+  padding-bottom: 185px;
+}
+
+  .c-b-hero__head-one {
+    max-width: 770px;
+
+    font-size: 84px;
+  }
+
+
+  .c-b-hero__intro {
+    max-width: 800px;
+
+    margin-top: 34px;
+  }
+
+
+  .c-b-hero__intro p {
+    max-width: 800px;
+
+    font-size: 21px;
+  }
+
+
+  .c-b-hero__intro p + p {
+    margin-top: 31px;
+  }
+
+
+  .c-b-hero__buttons {
+    margin-top: 64px;
+  }
+
+
+  .c-b-hero__button {
+    min-width: 195px;
+
+    height: 64px;
+
+    font-size: 18px;
+  }
+
+
+  .c-b-hero__logos {
+    bottom: 15px;
+  }
+
+
+  .c-b-hero__logos-inner {
+    width: min(
+      1760px,
+      calc(100% - 160px)
+    );
+
+    gap: 40px;
+  }
+
+
+  .c-b-hero__logo img {
+    max-width: 155px;
+    max-height: 66px;
+  }
+}
+
+
+/* =========================================================
+   DESKTOP
+   1201px - 1599px
+   ========================================================= */
+
+@media (min-width: 1201px) and (max-width: 1599px) {
+
+  .c-b-hero {
+    --header-height: 72px;
+  }
+
+
+  .c-b-hero__container {
+    width: min(
+      1500px,
+      calc(100% - 120px)
+    );
+
+  padding-top: calc(var(--header-height) + 30px);
+
+    padding-bottom: 203px;
+  }
+
+
+  .c-b-hero__head-one {
+    max-width: 720px;
+
+    font-size: clamp(
+      62px,
+      5.1vw,
+      78px
+    );
+  }
+
+
+  .c-b-hero__intro {
+    max-width: 760px;
+
+    margin-top: 31px;
+  }
+
+
+  .c-b-hero__intro p {
+    max-width: 760px;
+
+    font-size: 20px;
+  }
+
+
+  .c-b-hero__intro p + p {
+    margin-top: 28px;
+  }
+
+
+  .c-b-hero__buttons {
+    margin-top: 60px;
+  }
+
+
+  .c-b-hero__button {
+    min-width: 185px;
+
+    height: 60px;
+
+    font-size: 17px;
+  }
+
+
+  .c-b-hero__logos {
+    bottom: 50px;
+  }
+
+
+  .c-b-hero__logos-inner {
+    width: min(
+      1500px,
+      calc(100% - 120px)
+    );
+
+    gap: 28px;
+  }
+
+
+  .c-b-hero__logo img {
+    max-width: 140px;
+    max-height: 58px;
+  }
+}
+
+
+/* =========================================================
+   LAPTOP
+   992px - 1200px
+   ========================================================= */
+
+@media (min-width: 992px) and (max-width: 1200px) {
+
+  .c-b-hero {
+    --header-height: 64px;
+  }
+
+
+  .c-b-hero__container {
+    width: calc(100% - 80px);
+
+padding-top: calc(var(--header-height) + 30px);
+   padding-bottom: 203px;
+  }
+
+
+  .c-b-hero__head-one {
+    max-width: 680px;
+
+    font-size: clamp(
+      55px,
+      6vw,
+      70px
+    );
+  }
+
+
+  .c-b-hero__intro {
+    max-width: 700px;
+
+    margin-top: 28px;
+  }
+
+
+  .c-b-hero__intro p {
+    max-width: 700px;
+
+    font-size: 18px;
+
+    line-height: 1.45;
+  }
+
+
+  .c-b-hero__intro p + p {
+    margin-top: 25px;
+  }
+
+
+  .c-b-hero__buttons {
+    margin-top: 54px;
+  }
+
+
+  .c-b-hero__button {
+    min-width: 160px;
+
+    height: 56px;
+
+    padding: 0 20px;
+
+    font-size: 16px;
+  }
+
+
+  .c-b-hero__logos {
+    bottom: 18px;
+  }
+
+
+  .c-b-hero__logos-inner {
+    width: calc(100% - 80px);
+
+    gap: 20px;
+  }
+
+
+  .c-b-hero__logo img {
+    max-width: 115px;
+    max-height: 50px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   601px - 991px
+   ========================================================= */
+
+@media (min-width: 601px) and (max-width: 991px) {
+
+  .c-b-hero {
+    --header-height: 64px;
+
+    min-height: auto;
+  }
+
+
+  .c-b-hero__container {
+    width: calc(100% - 60px);
+
+    min-height: auto;
+
+    padding-top: 44px;
+
+    padding-bottom: 0;
+  }
+
+
+  .c-b-hero__head-one {
+    max-width: 650px;
+
+    font-size: clamp(
+      48px,
+      7vw,
+      64px
+    );
+
+    line-height: 0.99;
+  }
+
+
+  .c-b-hero__intro {
+    max-width: 650px;
+
+    margin-top: 28px;
+  }
+
+
+  .c-b-hero__intro p {
+    max-width: 650px;
+
+    font-size: 18px;
+
+    line-height: 1.46;
+  }
+
+
+  .c-b-hero__intro p + p {
+    margin-top: 24px;
+  }
+
+
+  .c-b-hero__buttons {
+    margin-top: 50px;
+  }
+
+
+  .c-b-hero__button {
+    min-width: 155px;
+
+    height: 56px;
+
+    padding: 0 18px;
+
+    font-size: 16px;
+  }
+
+  
+
+
+  /* Logos move into normal flow */
+  /* This prevents overlap at tablet heights */
+
+  .c-b-hero__logos {
+    position: relative;
+
+    left: auto;
+    right: auto;
+    bottom: auto;
+
+    width: 100%;
+
+    margin-top: 72px;
+
+    padding-bottom: 26px;
+  }
+
+
+  .c-b-hero__logos-inner {
+    width: calc(100% - 60px);
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 25px 32px;
+  }
+
+
+  .c-b-hero__logo img {
+    max-width: 105px;
+    max-height: 48px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   <= 600px
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .c-b-hero {
+    --header-height: 70px;
+
+    min-height: auto;
+
+    overflow: hidden;
+  }
+
+
+  .c-b-hero__video {
+    object-position: center center;
+  }
+
+
+  .c-b-hero__video__tint {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(2, 9, 25, 0.08) 0%,
+        rgba(2, 9, 25, 0.03) 52%,
+        rgba(2, 9, 25, 0.20) 100%
+      );
+  }
+
+
+  .c-b-hero__container {
+    width: calc(100% - 32px);
+
+    min-height: auto;
+
+           padding-top: calc(var(--header-height) + 20px);
+
+    padding-bottom: 0;
+  }
+
+
+  .c-b-hero__head-one {
+    width: 100%;
+    max-width: 100%;
+
+    font-size: clamp(
+      40px,
+      11vw,
+      52px
+    );
+
+    line-height: 0.99;
+
+    letter-spacing: -0.035em;
+  }
+
+
+  .c-b-hero__intro {
+    width: 100%;
+    max-width: 100%;
+
+    margin-top: 27px;
+  }
+
+
+  .c-b-hero__intro p {
+    width: 100%;
+    max-width: 100%;
+
+    font-size: 16px;
+
+    line-height: 1.47;
+
+    letter-spacing: -0.01em;
+  }
+
+
+  .c-b-hero__intro p + p {
+    margin-top: 22px;
+  }
+
+
+  /* Buttons */
+
+  .c-b-hero__buttons {
+    width: 100%;
+    max-width: 100%;
+
+    margin-top: 25px;
+  }
+
+
+  .c-b-hero__button {
+    flex: 1 1 50%;
+
+    min-width: 0;
+
+    height: 54px;
+
+    padding: 0 8px;
+
+    font-size: 15px;
+  }
+
+
+  /* =======================================================
+     MOBILE LOGOS
+     Normal flow = no overlap
+     ======================================================= */
+
+  .c-b-hero__logos {
+    position: relative;
+
+    left: auto;
+    right: auto;
+    bottom: auto;
+
+    width: 100%;
+
+    margin-top: 68px;
+
+    padding-bottom: 28px;
+  }
+
+
+  .c-b-hero__logos-inner {
+    width: calc(100% - 32px);
+
+    display: grid;
+
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+
+    align-items: center;
+    justify-items: center;
+
+    gap: 24px 10px;
+  }
+
+
+  .c-b-hero__logo {
+    width: 100%;
+  }
+
+
+  .c-b-hero__logo img {
+    max-width: 78px;
+
+    max-height: 38px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   <= 400px
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+  .c-b-hero__container {
+    width: calc(100% - 28px);
+
+  
+  }
+
+
+  .c-b-hero__head-one {
+    font-size: 41px;
+
+    line-height: 1;
+  }
+
+
+  .c-b-hero__intro {
+    margin-top: 25px;
+  }
+
+
+  .c-b-hero__intro p {
+    font-size: 15.5px;
+
+    line-height: 1.46;
+  }
+
+
+  .c-b-hero__buttons {
+    margin-top: 23px;
+  }
+
+
+  .c-b-hero__button {
+    height: 52px;
+
+    padding: 0 6px;
+
+    font-size: 14px;
+  }
+
+
+  .c-b-hero__logos {
+    margin-top: 58px;
+
+    padding-bottom: 24px;
+  }
+
+
+  .c-b-hero__logos-inner {
+    width: calc(100% - 28px);
+
+    gap: 20px 8px;
+  }
+
+
+  .c-b-hero__logo img {
+    max-width: 68px;
+
+    max-height: 34px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   <= 350px
+   ========================================================= */
+
+@media (max-width: 350px) {
+
+  .c-b-hero__container {
+    width: calc(100% - 24px);
+
+    padding-top: 24px;
+  }
+
+
+  .c-b-hero__head-one {
+    font-size: 38px;
+  }
+
+
+  .c-b-hero__intro p {
+    font-size: 15px;
+  }
+
+
+  .c-b-hero__button {
+    height: 50px;
+
+    font-size: 13px;
+  }
+
+
+  .c-b-hero__logos-inner {
+    width: calc(100% - 24px);
+
+    gap: 18px 6px;
+  }
+
+
+  .c-b-hero__logo img {
+    max-width: 62px;
+
+    max-height: 31px;
+  }
+}
+
+
+/* =========================================================
+   SHORT LAPTOP / SHORT DESKTOP
+   Prevent content touching bottom logos
+   ========================================================= */
+
+@media (min-width: 992px) and (max-height: 760px) {
+
+  .c-b-hero__container {
+    padding-top: 160px;
+
+    padding-bottom: 203px;
+  }
+
+
+  .c-b-hero__head-one {
+    font-size: clamp(
+      52px,
+      4.5vw,
+      68px
+    );
+  }
+
+
+  .c-b-hero__intro {
+    margin-top: 25px;
+  }
+
+
+  .c-b-hero__intro p {
+    font-size: 17px;
+
+    line-height: 1.4;
+  }
+
+
+  .c-b-hero__intro p + p {
+    margin-top: 21px;
+  }
+
+
+  .c-b-hero__buttons {
+    margin-top: 23px;
+  }
+
+
+  .c-b-hero__button {
+    height: 54px;
+  }
+}
+
+
+/* =========================================================
+   EXTRA BREATHING ROOM
+   Space between the hero and the section right below it
+   ========================================================= */
+
+.c-b-hero + .o-container--fluid {
+  padding-top: 3rem;
+}
+
+@media (min-width: 48em) {
+  .c-b-hero + .o-container--fluid {
+    padding-top: 5rem;
+  }
+}
+
+
+.c-b-hero,
+.c-b-hero__container,
+.c-b-hero__content,
+.c-b-hero__title,
+.c-b-hero__intro,
+.c-b-hero__buttons,
+.c-b-hero__logos,
+.c-b-hero__logos-inner {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .c-b-hero__video {
+    display: none;
+  }
+}

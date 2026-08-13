@@ -1,0 +1,934 @@
+.cap-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.cap-header__content {
+  max-width: 760px;
+}
+
+.cap-heading {
+  color: #fff;
+  font-size: 72px;
+
+  line-height: 1;
+  margin: 0 0 18px;
+}
+
+.cap-subheading {
+  color: rgba(255,255,255,.75);
+  font-size: 24px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.cap-btn {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+
+
+
+
+
+
+
+/* ==========================================================
+   B2B PROCESS SECTION
+========================================================== */
+
+.process-section {
+  background: #111111;
+  padding: 120px 0;
+  overflow: hidden;
+}
+
+.process-section * {
+  font-family: MontLight, sans-serif;
+}
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.process-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+  margin-bottom: 90px;
+}
+
+.process-header__content {
+  max-width: 700px;
+}
+
+.process-heading {
+  color: #fff;
+  font-size: 58px;
+  line-height: 1.1;
+  margin-bottom: 18px;
+}
+
+.process-subheading {
+  color: rgba(255,255,255,.70);
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+/* ==========================================================
+   BUTTON
+========================================================== */
+
+.process-btn {
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 240px;
+  height: 64px;
+
+  border: 1px solid rgba(255,255,255,.35);
+
+  color: #fff;
+  text-decoration: none;
+
+  font-size: 20px;
+
+  transition: .3s ease;
+}
+
+.process-btn:hover {
+
+  background: #ff7a00;
+  border-color: #ff7a00;
+  color: #fff;
+
+}
+
+/* ==========================================================
+   GRID
+========================================================== */
+
+.process-grid {
+
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+
+  gap: 30px;
+
+}
+
+/* ==========================================================
+   CARD
+========================================================== */
+
+.process-card{
+
+  position: relative;
+  text-align:center;
+
+}
+
+/* ==========================================================
+   B2B SERVICES CARDS
+========================================================== */
+
+.b2b-services-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:40px;
+    margin-top:50px;
+}
+
+.b2b-service-card{
+    background:#000;
+    min-height:650px;
+    padding:36px;
+    display:flex;
+    flex-direction:column;
+    transition:.35s ease;
+}
+
+.b2b-service-card:hover{
+    transform:translateY(-8px);
+}
+
+.b2b-service-card h3{
+    color:#EE9A21;
+    font-size:48px;
+    line-height:1.1;
+    margin-bottom:22px;
+}
+
+.b2b-service-card ul{
+    margin:0;
+    padding-left:22px;
+}
+
+.b2b-service-card li{
+    color:#fff;
+    font-size:20px;
+    line-height:1.8;
+    margin-bottom:16px;
+}
+
+/* ==========================================================
+   ARROW
+========================================================== */
+
+.process-arrow{
+
+  position:absolute;
+
+  top:50px;
+  right:-25px;
+
+  color:#6b7280;
+
+  font-size:52px;
+
+  z-index:5;
+
+}
+
+/* ==========================================================
+   CIRCLE
+========================================================== */
+
+.process-circle{
+
+  width:160px;
+  height:160px;
+
+  margin:auto;
+
+  border-radius:50%;
+
+  background:#1b1b1b;
+
+  border:2px solid rgba(255,255,255,.12);
+
+  position:relative;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  transition:.35s ease;
+
+}
+
+.process-circle::before{
+
+  content:"";
+
+  position:absolute;
+
+  inset:-12px;
+
+  border-radius:50%;
+
+  border:2px dashed rgba(255,255,255,.35);
+
+}
+
+/* ==========================================================
+   NUMBER
+========================================================== */
+
+.step-number{
+
+  position:absolute;
+
+  top:-12px;
+  left:5px;
+
+  width:40px;
+  height:40px;
+
+  border-radius:50%;
+
+  background:#202020;
+
+  border:2px solid #fff;
+
+  color:#fff;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:24px;
+
+}
+
+/* ==========================================================
+   ICON
+========================================================== */
+
+.process-icon{
+
+  width:90px;
+  height:90px;
+
+  object-fit:contain;
+
+}
+
+/* ==========================================================
+   CONTENT
+========================================================== */
+
+.process-content{
+
+  margin-top:40px;
+
+}
+
+.process-title{
+
+  color:#fff;
+
+  font-size:30px;
+
+  margin-bottom:16px;
+
+  line-height:1.3;
+
+}
+
+.process-description{
+
+  color:rgba(255,255,255,.75);
+
+  font-size:17px;
+
+  line-height:1.8;
+
+  max-width:260px;
+
+  margin:auto;
+
+}
+
+/* ==========================================================
+   HOVER
+========================================================== */
+
+.process-card:hover .process-circle{
+
+  transform:translateY(-10px);
+
+  border-color:#ff7a00;
+
+}
+
+.process-card:hover .process-circle::before{
+
+  border-color:#ff7a00;
+
+}
+
+.process-card:hover .step-number{
+
+  background:#ff7a00;
+  border-color:#ff7a00;
+
+}
+
+
+/* ==========================================================
+   B2B CASE STUDIES
+========================================================== */
+
+.case-section{
+    background:#111;
+    padding:30px 0;
+}
+
+.case-section *{
+    font-family:MontLight,sans-serif;
+}
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.case-header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:40px;
+
+    margin-bottom:70px;
+
+}
+
+.case-heading{
+
+    color:#fff;
+    font-size:64px;
+    line-height:1;
+    margin-bottom:18px;
+
+}
+
+.case-subheading{
+
+    color:rgba(255,255,255,.75);
+
+    max-width:650px;
+
+    font-size:20px;
+    line-height:1.8;
+
+}
+
+.case-btn{
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    width:230px;
+    height:64px;
+
+    border:1px solid rgba(255,255,255,.35);
+
+    color:#fff;
+    text-decoration:none;
+    font-size:20px;
+
+    transition:.35s;
+
+}
+
+.case-btn:hover{
+
+    background:#ff7a00;
+    border-color:#ff7a00;
+    color:#fff;
+
+}
+
+/* ==========================================================
+   GRID
+========================================================== */
+
+.case-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:28px;
+
+}
+
+/* ==========================================================
+   CARD
+========================================================== */
+
+.case-card{
+
+    background:#1b1b1b;
+
+    overflow:hidden;
+
+    border-radius:18px;
+
+    transition:.35s;
+
+}
+
+.case-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+/* ==========================================================
+   IMAGE
+========================================================== */
+
+.case-image{
+
+    position:relative;
+
+    aspect-ratio:4/5;
+
+    overflow:hidden;
+
+}
+
+.case-image img{
+
+    transition:.45s ease;
+
+}
+
+.case-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+/* ==========================================================
+   CONTENT
+========================================================== */
+
+.case-content{
+
+    padding:28px;
+
+}
+
+.case-category{
+
+    display:inline-block;
+
+    color:#ff7a00;
+
+    font-size:14px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+
+    margin-bottom:14px;
+
+}
+
+.case-title{
+
+    color:#fff;
+
+    font-size:30px;
+
+    line-height:1.3;
+
+    margin-bottom:18px;
+
+}
+
+.case-result{
+
+    color:rgba(255,255,255,.75);
+
+    line-height:1.8;
+
+    margin-bottom:26px;
+
+}
+
+.case-link{
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+.case-link:hover{
+
+    color:#ff7a00;
+
+}
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+.case-footer{
+
+    display:flex;
+    justify-content:center;
+
+    margin-top:70px;
+
+}
+
+/* =========================================================
+   B2B CASE SLIDE
+========================================================= */
+
+/* =========================================================
+   B2B CASE SLIDE
+========================================================= */
+
+
+/* =========================================================
+   ARROWS
+========================================================= */
+
+.b2b-case-slide-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+
+  width: 38px;
+  height: 38px;
+
+  transform: translateY(-50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255,255,255,.5);
+  border-radius: 50%;
+
+  background: rgba(0,0,0,.45);
+  color: #fff;
+
+  font-size: 16px;
+  cursor: pointer;
+
+  opacity: 0;
+  transition: .3s ease;
+}
+
+.b2b-case-slide-image:hover .b2b-case-slide-arrow {
+  opacity: 1;
+}
+
+.b2b-case-slide-arrow:hover {
+  background: #f5a623;
+  border-color: #f5a623;
+  color: #000;
+}
+
+.b2b-case-slide-arrow--prev {
+  left: 14px;
+}
+
+.b2b-case-slide-arrow--next {
+  right: 14px;
+}
+
+
+/* =========================================================
+   DOTS
+========================================================= */
+
+.b2b-case-slide-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 16px;
+  z-index: 5;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.b2b-case-slide-dot {
+  width: 7px;
+  height: 7px;
+
+  padding: 0;
+
+  border: 0;
+  border-radius: 50%;
+
+  background: rgba(255,255,255,.45);
+
+  cursor: pointer;
+}
+
+.b2b-case-slide-dot.is-active {
+  width: 22px;
+  border-radius: 20px;
+  background: #f5a623;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.b2b-case-slide-content {
+  padding: 24px 24px 28px;
+  min-height: 190px;
+}
+
+.b2b-case-slide-category {
+  display: block;
+  margin-bottom: 12px;
+
+  color: #f5a623;
+
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.b2b-case-slide-content h3 {
+  margin: 0 0 12px;
+
+  color: #fff;
+
+  font-size: 25px;
+  line-height: 1.15;
+  font-weight: 400;
+}
+
+.b2b-case-slide-content p {
+  margin: 0 0 22px;
+
+  color: rgba(255,255,255,.6);
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.b2b-case-slide-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  transition: color .3s ease;
+}
+
+.b2b-case-slide-link:hover {
+  color: #f5a623;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .b2b-case-slide-container {
+    width: calc(100% - 50px);
+  }
+
+  .b2b-case-slide-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .b2b-case-slide-image {
+    height: 430px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .b2b-case-slide {
+    padding: 60px 0;
+  }
+
+  .b2b-case-slide-container {
+    width: calc(100% - 30px);
+  }
+
+  .b2b-case-slide-header {
+    display: block;
+    margin-bottom: 35px;
+  }
+
+  .b2b-case-slide-header h2 {
+    font-size: 42px;
+  }
+
+  .b2b-case-slide-view-all {
+    margin-top: 25px;
+  }
+
+  .b2b-case-slide-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .b2b-case-slide-image {
+    height: 430px;
+  }
+
+}
+
+
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media(max-width:1200px){
+
+.case-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media(max-width:768px){
+
+.case-header{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+}
+
+.case-heading{
+
+font-size:42px;
+
+}
+
+.case-subheading{
+
+font-size:18px;
+
+}
+
+.case-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.case-btn{
+
+width:100%;
+
+}
+
+}
+
+
+
+
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width:1200px){
+
+.process-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+row-gap:80px;
+
+}
+
+.process-arrow{
+
+display:none;
+
+}
+
+}
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width:768px){
+
+.process-header{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+}
+
+.process-heading{
+
+font-size:42px;
+
+}
+
+.process-subheading{
+
+font-size:18px;
+
+}
+
+.process-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.process-circle{
+
+width:220px;
+height:220px;
+
+}
+
+.process-title{
+
+font-size:26px;
+
+}
+
+.process-description{
+
+font-size:16px;
+
+}
+
+.process-btn{
+
+width:100%;
+
+margin-top:20px;
+
+}
+
+}
+
+
+
+
+@media (max-width: 992px) {
+
+  .cap-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cap-btn {
+    margin-top: 24px;
+  }
+
+  .cap-heading {
+    font-size: 48px;
+  }
+
+  .cap-subheading {
+    font-size: 18px;
+  }
+
+}

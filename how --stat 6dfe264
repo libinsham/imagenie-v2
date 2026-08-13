@@ -1,0 +1,45 @@
+[33mcommit f5e5b0a3444ba6f664d5bfd2445501d781a12f4e[m
+Author: Libin Sharma <libinonlines@gmail.com>
+Date:   Sat Aug 8 23:20:49 2026 +0530
+
+    Aug 08 2026
+
+ app/b2b-tech-marketing/page.js          |    6 [32m+[m[31m-[m
+ app/b2c/page.js                         |  160 [32m++[m[31m--[m
+ app/case-studies/page.js                |   14 [32m+[m[31m-[m
+ app/globals.css                         |    3 [32m+[m
+ app/page.js                             |    3 [31m-[m
+ app/styles/about.css                    |  658 [32m++++++++++++[m[31m-----[m
+ app/styles/b2b.css                      |  210 [32m++++++[m
+ app/styles/b2bcase.css                  |  823 [32m+++++++++++++++++++++[m
+ app/styles/b2bslide.css                 |  533 [32m++++++++++++++[m
+ app/styles/b2c.css                      |  796 [32m++++++++++++++++++[m[31m--[m
+ app/styles/casestudies.css              |    0
+ app/styles/home.css                     |  309 [32m++++++++[m
+ app/styles/industriesorbit.css          |    2 [32m+[m[31m-[m
+ app/styles/workpage.css                 | 1226 [32m++++++++++++++++++++++++++[m[31m-----[m
+ app/work/page.js                        |   15 [32m+[m[31m-[m
+ components/B2BCaseSlide.jsx             |  292 [32m++++++++[m
+ components/B2BCaseStudies.jsx           |  293 [32m+++++[m[31m---[m
+ components/B2BCaseStudiesold.jsx        |  110 [32m+++[m
+ components/B2CCaseStudiesSummary.jsx    |  342 [32m+++++++[m[31m--[m
+ components/FeaturedProject.jsx          |   73 [32m+[m[31m-[m
+ components/WorkHero.jsx                 |   98 [32m+[m[31m--[m
+ components/WorkShowcase.jsx             |   82 [32m++[m[31m-[m
+ lib/team.js                             |   58 [32m+[m[31m-[m
+ public/images/sdfaree.jpg               |  Bin [31m0[m -> [32m33750[m bytes
+ public/images/team/Ajas.jpg             |  Bin [31m0[m -> [32m476394[m bytes
+ public/images/team/Apoorva_rao.jpg      |  Bin [31m0[m -> [32m16953[m bytes
+ public/images/team/Apoorva_rao.png      |  Bin [31m0[m -> [32m2012305[m bytes
+ public/images/team/Ashwin_CEO_1.png     |  Bin [31m0[m -> [32m203939[m bytes
+ public/images/team/Harita.jpg           |  Bin [31m0[m -> [32m278113[m bytes
+ public/images/team/Janvi.jpg            |  Bin [31m0[m -> [32m35198[m bytes
+ public/images/team/Janvi.png            |  Bin [31m0[m -> [32m2116000[m bytes
+ public/images/team/Meera.jpg            |  Bin [31m0[m -> [32m92531[m bytes
+ public/images/team/Nafeez_Al.jpg        |  Bin [31m0[m -> [32m198730[m bytes
+ public/images/team/Saraswathi_Patra.jpg |  Bin [31m0[m -> [32m389124[m bytes
+ public/images/team/Shreya_Gir.jpg       |  Bin [31m0[m -> [32m663343[m bytes
+ public/images/team/Subramani.jpg        |  Bin [31m0[m -> [32m126172[m bytes
+ public/images/team/Tapati_CEO_2.png     |  Bin [31m0[m -> [32m205412[m bytes
+ public/images/work/work-hero.jpg        |  Bin [31m0[m -> [32m30904[m bytes
+ 38 files changed, 5337 insertions(+), 769 deletions(-)

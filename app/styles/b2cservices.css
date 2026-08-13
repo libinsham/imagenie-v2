@@ -1,0 +1,274 @@
+/* =========================================================
+   B2C SERVICES
+========================================================= */
+
+.b2c-capabilities {
+  width: 100%;
+  padding: 110px 0;
+  background: #000000;
+  color: #ecdddd;
+}
+
+.b2c-capabilities .cap-header {
+  width: min(1380px, calc(100% - 80px));
+  margin: 0 auto 60px;
+}
+
+.b2c-capabilities .cap-header h2 {
+  margin: 0 0 20px;
+
+  color: #faf6f6;
+
+  font-size: clamp(42px, 5vw, 72px);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -2.5px;
+}
+
+.b2c-capabilities .cap-subheading {
+  max-width: 1100px;
+
+  margin: 0;
+
+  color: #555555;
+
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.b2c-capabilities .o-container__row {
+  width: min(1380px, calc(100% - 80px));
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 24px;
+}
+
+
+/* =========================================================
+   COLUMN
+========================================================= */
+
+.b2c-capabilities .o-container__col-12,
+.b2c-capabilities .o-container__col-md-6,
+.b2c-capabilities .o-container__col-lg-4 {
+  width: 100%;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.b2c-capabilities .cap-card {
+  position: relative;
+
+  width: 100%;
+
+  padding: 0 0 35px;
+
+  background: #111111;
+
+  color: #ffffff;
+
+  overflow: hidden;
+
+  border-radius: 4px;
+
+  min-height: 650px;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.b2c-capabilities .cap-image {
+  width: 100%;
+
+  height: 300px;
+
+  overflow: hidden;
+
+  background: #1a1a1a;
+}
+
+.b2c-capabilities .cap-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+.b2c-capabilities .cap-card:hover .cap-image img {
+  transform: scale(1.04);
+}
+
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.b2c-capabilities .cap-number {
+  display: block;
+
+  margin: 28px 30px 12px;
+
+  color: #f5a623;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.b2c-capabilities .cap-title {
+  margin: 0 30px 22px;
+
+  color: #ffffff;
+
+  font-size: clamp(26px, 2.4vw, 38px);
+  font-weight: 500;
+
+  line-height: 1.05;
+
+  letter-spacing: -1px;
+}
+
+
+/* =========================================================
+   SUBTITLE
+========================================================= */
+
+.b2c-capabilities .cap-subtitle {
+  margin: 0 30px 20px;
+
+  color: #999999;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   LIST
+========================================================= */
+
+.b2c-capabilities .cap-list {
+  margin: 0;
+
+  padding: 0 30px;
+
+  list-style: none;
+}
+
+.b2c-capabilities .cap-list li {
+  position: relative;
+
+  margin: 0;
+
+  padding: 12px 0 12px 20px;
+
+  color: #c8c8c8;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+
+  border-top: 1px solid #292929;
+}
+
+.b2c-capabilities .cap-list li::before {
+  content: "•";
+
+  position: absolute;
+
+  left: 0;
+
+  color: #f5a623;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .b2c-capabilities {
+    padding: 80px 0;
+  }
+
+  .b2c-capabilities .cap-header {
+    width: calc(100% - 50px);
+  }
+
+  .b2c-capabilities .o-container__row {
+    width: calc(100% - 50px);
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .b2c-capabilities {
+    padding: 60px 0;
+  }
+
+  .b2c-capabilities .cap-header {
+    width: calc(100% - 30px);
+
+    margin-bottom: 40px;
+  }
+
+  .b2c-capabilities .cap-header h2 {
+    font-size: 42px;
+  }
+
+  .b2c-capabilities .cap-subheading {
+    font-size: 16px;
+  }
+
+  .b2c-capabilities .o-container__row {
+    width: calc(100% - 30px);
+
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .b2c-capabilities .cap-card {
+    min-height: auto;
+  }
+
+  .b2c-capabilities .cap-image {
+    height: 280px;
+  }
+
+}

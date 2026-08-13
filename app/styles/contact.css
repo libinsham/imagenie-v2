@@ -1,0 +1,426 @@
+/* =========================================================
+   CONTACT FORM
+   ========================================================= */
+
+#contact-form {
+  padding-bottom: 100px;
+}
+
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 220px;
+  height: 74px;
+
+  background: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 0;
+
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 500;
+
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.contact-btn:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+
+/* =========================================================
+   OFFICES SECTION
+   3 COLUMNS
+   Logo | Address | Contact
+   ========================================================= */
+
+.offices-section {
+  width: 100%;
+  background: #ffffff;
+  color: #111111;
+
+  padding: 100px 0;
+}
+
+
+/* =========================================================
+   OFFICES ROW
+   ========================================================= */
+
+.offices-row {
+  width: min(1400px, calc(100% - 80px));
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    1.2fr
+    1fr
+    1fr;
+
+  column-gap: 70px;
+  row-gap: 50px;
+
+  align-items: start;
+}
+
+
+/* =========================================================
+   COMMON COLUMN
+   ========================================================= */
+
+.offices-column {
+  min-width: 0;
+}
+
+
+/* =========================================================
+   COLUMN 1 — LOGO
+   ========================================================= */
+
+.offices-logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.offices-logo img {
+  display: block;
+
+  width: 100%;
+  max-width: 620px;
+  height: auto;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   COLUMN 2 — ADDRESS
+   ========================================================= */
+
+.offices-address {
+  padding-right: 20px;
+}
+
+.offices-address h3,
+.offices-contact h3 {
+  margin: 0 0 25px;
+
+  font-size: 26px;
+  line-height: 1.2;
+  font-weight: 500;
+
+  color: #111111;
+}
+
+.offices-address p {
+  margin: 0;
+
+  font-size: 19px;
+  line-height: 1.8;
+
+  color: #4b4b4b;
+}
+
+
+/* =========================================================
+   COLUMN 3 — CONTACT
+   ========================================================= */
+
+.offices-contact {
+  padding-right: 10px;
+}
+
+.offices-contact p {
+  margin: 0 0 30px;
+
+  font-size: 19px;
+  line-height: 1.8;
+
+  color: #4b4b4b;
+}
+
+.offices-contact strong {
+  font-weight: 600;
+  color: #111111;
+}
+
+
+/* =========================================================
+   EMAIL
+   ========================================================= */
+
+.offices-contact a:not(.offices-link) {
+  color: #333333;
+  text-decoration: none;
+
+  transition: color 0.25s ease;
+}
+
+.offices-contact a:not(.offices-link):hover {
+  color: #ee9a21;
+}
+
+
+/* =========================================================
+   GET DIRECTIONS
+   ========================================================= */
+
+.offices-link {
+  display: inline-block;
+
+  color: #ee9a21;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.offices-link:hover {
+  color: #111111;
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   OPTIONAL LABEL
+   ========================================================= */
+
+.offices-label {
+  display: block;
+
+  margin-bottom: 18px;
+
+  color: #ee9a21;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  .offices-row {
+    width: min(100% - 60px, 1100px);
+
+    grid-template-columns:
+      1fr
+      1fr;
+
+    column-gap: 50px;
+    row-gap: 60px;
+  }
+
+  /* Logo spans both columns */
+
+  .offices-logo {
+    grid-column: 1 / -1;
+
+    justify-content: center;
+  }
+
+  .offices-logo img {
+    width: 80%;
+    max-width: 550px;
+  }
+
+ .offices-address,
+.offices-contact {
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  align-self: start;
+}
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+  .offices-section {
+    padding: 70px 0;
+  }
+
+  .offices-row {
+    width: calc(100% - 40px);
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+
+  /* LOGO */
+
+  .offices-logo {
+    grid-column: auto;
+
+    justify-content: center;
+
+    text-align: center;
+  }
+
+  .offices-logo img {
+    width: 90%;
+    max-width: 380px;
+  }
+
+
+  /* ADDRESS + CONTACT */
+
+  .offices-address,
+  .offices-contact {
+    padding: 0;
+
+    text-align: center;
+  }
+
+ .offices-address h3,
+.offices-contact h3 {
+  margin: 0 0 25px;
+
+  min-height: 31px;
+
+  font-size: 26px;
+  line-height: 31px;
+  font-weight: 500;
+
+  color: #111111;
+
+  display: flex;
+  align-items: center;
+}
+
+.offices-address p {
+  margin: 0;
+
+  font-size: 19px;
+  line-height: 1.8;
+
+  color: #4b4b4b;
+}
+
+.offices-contact p {
+  margin: 0 0 30px;
+
+  font-size: 19px;
+  line-height: 1.8;
+
+  color: #4b4b4b;
+}
+
+
+ 
+.offices-contact strong {
+  font-weight: 600;
+  color: #111111;
+}
+
+  .offices-link {
+  display: inline-block;
+
+  color: #ee9a21;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.offices-link:hover {
+  color: #111111;
+  text-decoration: underline;
+}
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .offices-section {
+    padding: 55px 0;
+  }
+
+  .offices-row {
+    width: calc(100% - 30px);
+
+    gap: 38px;
+  }
+
+  .offices-logo img {
+    width: 95%;
+    max-width: 330px;
+  }
+
+  .offices-address h3,
+  .offices-contact h3 {
+    font-size: 21px;
+  }
+
+  .offices-address p,
+  .offices-contact p {
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .offices-link {
+    font-size: 16px;
+  }
+}
+
+
+/* =========================================================
+   GLOBAL SAFETY FOR THIS SECTION
+   Prevents horizontal overflow
+   ========================================================= */
+
+.offices-section,
+.offices-row,
+.offices-column {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.offices-section img {
+  max-width: 100%;
+  height: auto;
+}

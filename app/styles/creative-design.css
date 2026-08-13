@@ -1,0 +1,810 @@
+/* ============================================================
+   IMAGENIE — CREATIVE DESIGN PAGE
+   Completely isolated styles
+   ============================================================ */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* ============================================================
+   PAGE WRAPPER
+   ============================================================ */
+
+.creative-design-page {
+  width: 100%;
+  background: #ffffff;
+  color: #111111;
+  /*
+    Header is fixed/sticky.
+    This prevents the top of the Creative Design content
+    from going underneath the header.
+  */
+  padding-top: 50px;
+  box-sizing: border-box;
+}
+
+
+/* ============================================================
+   MAIN SECTION
+   ============================================================ */
+
+.creative-design-section {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 32% 68%;
+  min-height: calc(100vh - 0px);
+  box-sizing: border-box;
+}
+
+
+/* ============================================================
+   LEFT ORANGE PANEL
+   ============================================================ */
+
+.creative-design-left {
+  position: relative;
+
+  background: linear-gradient(
+    180deg,
+    #f7b51c 0%,
+    #f7931e 100%
+  );
+
+  min-height: calc(100vh - 74px);
+
+  padding: 45px 7% 55px;
+
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+}
+
+
+/*
+  Decorative circle
+*/
+
+.creative-design-left::after {
+  content: "";
+
+  position: absolute;
+
+  width: 520px;
+  height: 520px;
+
+  right: -260px;
+  bottom: -270px;
+
+  border: 1px solid rgba(0, 0, 0, 0.16);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+
+/* ============================================================
+   IMAGE
+   ============================================================ */
+
+.creative-design-image-wrap {
+  width: 250px;
+  height: 250px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 30px;
+
+  position: relative;
+  z-index: 2;
+
+  flex-shrink: 0;
+}
+
+
+.creative-design-image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+
+/* ============================================================
+   PAGE NUMBER
+   ============================================================ */
+
+.creative-design-number {
+  position: relative;
+  z-index: 2;
+
+  display: block;
+
+  margin-top: 5px;
+  margin-bottom: 20px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  line-height: 1;
+
+  color: #111111;
+}
+
+
+/* ============================================================
+   MAIN TITLE
+   ============================================================ */
+
+.creative-design-title {
+  position: relative;
+  z-index: 2;
+
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(58px, 5.2vw, 100px);
+
+  line-height: 0.88;
+
+  letter-spacing: -0.055em;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+}
+
+
+/* ============================================================
+   DESCRIPTION
+   ============================================================ */
+
+.creative-design-description {
+  position: relative;
+  z-index: 2;
+
+  max-width: 440px;
+
+  margin: 38px 0 0;
+
+  color: #ffffff;
+
+  font-size: 19px;
+
+  line-height: 1.5;
+
+  font-weight: 400;
+}
+
+
+/* ============================================================
+   RIGHT WHITE PANEL
+   ============================================================ */
+
+.creative-design-right {
+  width: 100%;
+
+  background: #ffffff;
+
+  min-width: 0;
+
+  box-sizing: border-box;
+}
+
+
+/* ============================================================
+   RIGHT CONTENT
+
+   IMPORTANT:
+   NAV | DIVIDER | FAQ
+   ============================================================ */
+
+.creative-design-content {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(250px, 36%)
+    1px
+    minmax(0, 64%);
+
+  padding: 42px 5vw 65px;
+
+  box-sizing: border-box;
+
+  min-height: 100%;
+}
+
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+
+.creative-design-nav {
+  min-width: 0;
+
+  padding-right: 45px;
+
+  box-sizing: border-box;
+}
+
+
+.creative-design-nav-list {
+  list-style: none;
+
+  padding: 0;
+  margin: 0;
+}
+
+
+.creative-design-nav-item {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 12px;
+
+  margin-bottom: 30px;
+
+  color: #a5a5a5;
+
+  font-size: 20px;
+
+  line-height: 1.25;
+
+  font-weight: 400;
+
+  transition: color 0.25s ease;
+}
+
+
+.creative-design-nav-item.active {
+  color: #111111;
+
+  font-weight: 600;
+}
+
+
+.creative-design-nav-number {
+  min-width: 38px;
+
+  color: #a5a5a5;
+
+  font-size: 18px;
+
+  font-weight: 500;
+}
+
+
+.creative-design-nav-item.active
+.creative-design-nav-number {
+  color: #f4a800;
+}
+
+
+/* ============================================================
+   DIVIDER
+   ============================================================ */
+
+.creative-design-divider {
+  width: 1px;
+
+  background: #d5d5d5;
+
+  min-height: 100%;
+
+  align-self: stretch;
+}
+
+
+/* ============================================================
+   FAQ AREA
+   ============================================================ */
+
+.creative-design-faq {
+  min-width: 0;
+
+  padding-left: 55px;
+
+  box-sizing: border-box;
+}
+
+
+/* ============================================================
+   FAQ ITEM
+   ============================================================ */
+
+.creative-design-faq-item {
+  padding: 0 0 42px;
+
+  margin-bottom: 32px;
+
+  border-bottom: 1px solid #d8d8d8;
+}
+
+
+.creative-design-faq-item:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ============================================================
+   FAQ QUESTION
+   ============================================================ */
+
+.creative-design-faq-item h2 {
+  max-width: 700px;
+
+  margin: 0 0 24px;
+
+  color: #111111;
+
+  font-size: 21px;
+
+  line-height: 1.2;
+
+  font-weight: 700;
+
+  letter-spacing: -0.015em;
+}
+
+
+/* ============================================================
+   FAQ ANSWER
+   ============================================================ */
+
+.creative-design-faq-item p {
+  max-width: 700px;
+
+  margin: 0;
+
+  color: #303030;
+
+  font-size: 18px;
+
+  line-height: 1.45;
+
+  font-weight: 400;
+}
+
+
+/* ============================================================
+   SOFTWARE TOOLS
+   ============================================================ */
+
+.creative-design-tools {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  align-items: flex-start;
+
+  gap: 22px;
+
+  margin-top: 35px;
+
+  max-width: 760px;
+}
+
+
+.creative-design-tool {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: flex-start;
+
+  gap: 7px;
+
+  min-width: 55px;
+
+  color: #333333;
+
+  font-size: 12px;
+
+  line-height: 1.2;
+
+  text-align: center;
+}
+
+
+/* ============================================================
+   TOOL ICONS
+   ============================================================ */
+
+.tool-icon {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 5px;
+
+  color: #ffffff;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  font-family: Arial, sans-serif;
+
+  box-sizing: border-box;
+}
+
+
+/* Photoshop */
+
+.tool-icon.photoshop {
+  background: #001e36;
+}
+
+
+/* Illustrator */
+
+.tool-icon.illustrator {
+  background: #330000;
+}
+
+
+/* InDesign */
+
+.tool-icon.indesign {
+  background: #49001e;
+}
+
+
+/* XD */
+
+.tool-icon.xd {
+  background: #470047;
+}
+
+
+/* After Effects */
+
+.tool-icon.aftereffects {
+  background: #17005c;
+}
+
+
+/* Premiere */
+
+.tool-icon.premiere {
+  background: #05005a;
+}
+
+
+/* Figma */
+
+.tool-icon.figma {
+  background: #111111;
+}
+
+
+/* CorelDraw */
+
+.tool-icon.coreldraw {
+  background: #087f3d;
+}
+
+
+/* ============================================================
+   DESKTOP — LARGE
+   ============================================================ */
+
+@media (min-width: 1600px) {
+
+  .creative-design-content {
+    padding-left: 4vw;
+    padding-right: 4vw;
+  }
+
+  .creative-design-nav {
+    padding-right: 55px;
+  }
+
+  .creative-design-faq {
+    padding-left: 60px;
+  }
+
+  .creative-design-faq-item h2 {
+    font-size: 22px;
+  }
+
+  .creative-design-faq-item p {
+    font-size: 19px;
+  }
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 1100px) {
+
+  .creative-design-section {
+    grid-template-columns: 34% 66%;
+  }
+
+  .creative-design-left {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .creative-design-image-wrap {
+    width: 210px;
+    height: 210px;
+  }
+
+  .creative-design-title {
+    font-size: clamp(50px, 5.5vw, 76px);
+  }
+
+  .creative-design-description {
+    font-size: 17px;
+  }
+
+  .creative-design-content {
+    grid-template-columns:
+      minmax(210px, 38%)
+      1px
+      minmax(0, 62%);
+
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  .creative-design-nav {
+    padding-right: 30px;
+  }
+
+  .creative-design-nav-item {
+    font-size: 17px;
+  }
+
+  .creative-design-faq {
+    padding-left: 35px;
+  }
+
+  .creative-design-faq-item h2 {
+    font-size: 19px;
+  }
+
+  .creative-design-faq-item p {
+    font-size: 16px;
+  }
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+  .creative-design-page {
+    padding-top: 65px;
+  }
+
+
+  .creative-design-section {
+    display: block;
+
+    min-height: auto;
+  }
+
+
+  /* -----------------------------------------
+     LEFT PANEL
+     ----------------------------------------- */
+
+  .creative-design-left {
+    min-height: auto;
+
+    padding: 45px 28px 55px;
+  }
+
+
+  .creative-design-left::after {
+    width: 350px;
+    height: 350px;
+
+    right: -180px;
+    bottom: -180px;
+  }
+
+
+  .creative-design-image-wrap {
+    width: 190px;
+    height: 190px;
+
+    margin-bottom: 30px;
+  }
+
+
+  .creative-design-number {
+    margin-bottom: 18px;
+  }
+
+
+  .creative-design-title {
+    font-size: clamp(52px, 15vw, 82px);
+
+    line-height: 0.9;
+  }
+
+
+  .creative-design-description {
+    max-width: 500px;
+
+    margin-top: 30px;
+
+    font-size: 17px;
+
+    line-height: 1.5;
+  }
+
+
+  /* -----------------------------------------
+     RIGHT PANEL
+     ----------------------------------------- */
+
+  .creative-design-content {
+    display: block;
+
+    padding: 45px 28px 60px;
+  }
+
+
+  .creative-design-nav {
+    padding-right: 0;
+
+    margin-bottom: 40px;
+  }
+
+
+  .creative-design-nav-item {
+    margin-bottom: 20px;
+
+    font-size: 17px;
+  }
+
+
+  .creative-design-divider {
+    width: 100%;
+    height: 1px;
+
+    min-height: 1px;
+
+    margin-bottom: 40px;
+  }
+
+
+  .creative-design-faq {
+    padding-left: 0;
+  }
+
+
+  .creative-design-faq-item {
+    padding-bottom: 30px;
+
+    margin-bottom: 30px;
+  }
+
+
+  .creative-design-faq-item h2 {
+    font-size: 20px;
+
+    line-height: 1.25;
+  }
+
+
+  .creative-design-faq-item p {
+    font-size: 16px;
+
+    line-height: 1.5;
+  }
+
+
+  .creative-design-tools {
+    gap: 18px;
+
+    margin-top: 28px;
+  }
+
+}
+
+
+/* ============================================================
+   SMALL MOBILE
+   ============================================================ */
+
+@media (max-width: 480px) {
+
+  .creative-design-left {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+
+  .creative-design-content {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+
+  .creative-design-image-wrap {
+    width: 160px;
+    height: 160px;
+  }
+
+
+  .creative-design-title {
+    font-size: 55px;
+  }
+
+
+  .creative-design-description {
+    font-size: 16px;
+  }
+
+
+  .creative-design-nav-item {
+    font-size: 16px;
+
+    gap: 8px;
+  }
+
+
+  .creative-design-nav-number {
+    min-width: 32px;
+
+    font-size: 15px;
+  }
+
+
+  .creative-design-faq-item h2 {
+    font-size: 18px;
+  }
+
+
+  .creative-design-faq-item p {
+    font-size: 15px;
+  }
+
+
+  .creative-design-tools {
+    gap: 14px;
+  }
+
+
+  .creative-design-tool {
+    font-size: 10px;
+  }
+
+
+  .tool-icon {
+    width: 32px;
+    height: 32px;
+
+    font-size: 14px;
+  }
+
+}

@@ -1,0 +1,767 @@
+/* =========================================================
+   IMAGENIE — MARKETING & ADVERTISING
+   ========================================================= */
+
+.marketing-advertising-page {
+  width: 100%;
+  margin: 0;
+  padding: 50px 0 0;
+  background: #fff;
+  color: #111;
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   MAIN PAGE
+   ORANGE + RIGHT CONTENT
+   ========================================================= */
+
+.marketing-advertising-section {
+  width: 100%;
+  min-height: calc(100vh - 72px);
+
+  display: grid;
+
+  /* ONLY TWO MAIN COLUMNS */
+  grid-template-columns: 32% 68%;
+
+  margin: 0;
+  padding: 0;
+
+  background: #fff;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   LEFT ORANGE SECTION
+   ========================================================= */
+
+.marketing-advertising-left {
+  position: relative;
+
+  width: 100%;
+  min-width: 0;
+  min-height: calc(100vh - 72px);
+
+  padding: 48px 52px 65px;
+
+  background: linear-gradient(
+    180deg,
+    #f9bb18 0%,
+    #f7941d 100%
+  );
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+}
+
+
+/* Decorative circle */
+
+.marketing-advertising-left::after {
+  content: "";
+
+  position: absolute;
+
+  width: 520px;
+  height: 520px;
+
+  right: -300px;
+  bottom: -300px;
+
+  border: 1px solid rgba(90, 55, 0, 0.18);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.marketing-advertising-brand {
+  position: relative;
+  z-index: 2;
+
+  margin: 0 0 34px;
+
+  max-width: 300px;
+
+  font-size: 17px;
+  line-height: 1.25;
+
+  font-weight: 500;
+
+  color: #111;
+}
+
+
+/* =========================================================
+   IMAGE
+   ========================================================= */
+
+.marketing-advertising-image-wrap {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 0 30px;
+}
+
+
+.marketing-advertising-image {
+  display: block;
+
+  width: 190px;
+  max-width: 100%;
+
+  height: auto;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   PAGE NUMBER
+   ========================================================= */
+
+.marketing-advertising-number {
+  position: relative;
+  z-index: 2;
+
+  display: block;
+
+  margin: 0 0 16px;
+
+  font-size: 15px;
+  line-height: 1;
+
+  font-weight: 600;
+
+  color: #111;
+}
+
+
+/* =========================================================
+   MAIN TITLE
+   ========================================================= */
+
+.marketing-advertising-title {
+  position: relative;
+  z-index: 2;
+
+  display: block;
+
+  width: 100%;
+  max-width: 100%;
+
+  margin: 0;
+
+  /*
+     IMPORTANT:
+     Smaller than previous version so
+     ADVERTISING stays inside orange panel.
+  */
+
+  font-size: clamp(42px, 3.35vw, 58px);
+
+  line-height: 0.94;
+
+  letter-spacing: -1.5px;
+
+  font-weight: 700;
+
+  color: #fff;
+
+  white-space: normal;
+
+  overflow-wrap: normal;
+
+  word-break: normal;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.marketing-advertising-description {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 420px;
+
+  margin: 34px 0 0;
+
+  font-size: 18px;
+
+  line-height: 1.42;
+
+  font-weight: 400;
+
+  color: #fff;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   RIGHT SIDE
+   ========================================================= */
+
+.marketing-advertising-right {
+  min-width: 0;
+  width: 100%;
+
+  /*
+     IMPORTANT:
+     NAVIGATION + FAQ ARE TWO COLUMNS
+  */
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(250px, 39%)
+    minmax(450px, 61%);
+
+  align-items: stretch;
+
+  background: #fff;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   CONTENT WRAPPER
+   ========================================================= */
+
+.marketing-advertising-content {
+  display: contents;
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.marketing-advertising-nav {
+  min-width: 0;
+
+  padding: 72px 38px 65px;
+
+  background: #fff;
+
+  border-right: 1px solid #d4d4d4;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   NAV LIST
+   ========================================================= */
+
+.marketing-advertising-nav-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+
+/* =========================================================
+   NAV ITEM
+   ========================================================= */
+
+.marketing-advertising-nav-item {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 5px;
+
+  width: 100%;
+
+  margin: 0 0 38px;
+
+  padding: 0;
+
+  font-size: 18px;
+
+  line-height: 1.2;
+
+  font-weight: 400;
+
+  color: #b0b0b0;
+
+  box-sizing: border-box;
+}
+
+
+.marketing-advertising-nav-item:last-child {
+  margin-bottom: 0;
+}
+
+
+/* Active */
+
+.marketing-advertising-nav-item.active {
+  color: #111;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   NAV NUMBER
+   ========================================================= */
+
+.marketing-advertising-nav-number {
+  flex-shrink: 0;
+
+  white-space: nowrap;
+
+  color: #b0b0b0;
+}
+
+
+.marketing-advertising-nav-item.active
+.marketing-advertising-nav-number {
+  color: #f1a400;
+}
+
+
+/* =========================================================
+   FAQ
+   ========================================================= */
+
+.marketing-advertising-faq {
+  min-width: 0;
+
+  width: 100%;
+
+  padding: 72px 55px 70px;
+
+  background: #fff;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   FAQ ITEM
+   ========================================================= */
+
+.marketing-advertising-faq-item {
+  width: 100%;
+
+  margin: 0;
+
+  padding: 0 0 32px;
+
+  border-bottom: 1px solid #d8d8d8;
+
+  box-sizing: border-box;
+}
+
+
+.marketing-advertising-faq-item
++ .marketing-advertising-faq-item {
+  padding-top: 34px;
+}
+
+
+/* =========================================================
+   FAQ QUESTION
+   ========================================================= */
+
+.marketing-advertising-faq-question {
+  width: 100%;
+  max-width: 680px;
+
+  margin: 0;
+
+  font-size: 21px;
+
+  line-height: 1.16;
+
+  letter-spacing: -0.35px;
+
+  font-weight: 700;
+
+  color: #111;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   FAQ ANSWER
+   ========================================================= */
+
+.marketing-advertising-faq-answer {
+  width: 100%;
+  max-width: 720px;
+
+  margin: 24px 0 0;
+
+  font-size: 17px;
+
+  line-height: 1.45;
+
+  font-weight: 400;
+
+  color: #222;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   OLD DIVIDER
+   ========================================================= */
+
+.marketing-advertising-divider {
+  display: none;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   ========================================================= */
+
+@media (min-width: 1500px) {
+
+  .marketing-advertising-section {
+    grid-template-columns: 32% 68%;
+  }
+
+
+  .marketing-advertising-right {
+    grid-template-columns:
+      minmax(280px, 38%)
+      minmax(550px, 62%);
+  }
+
+
+  .marketing-advertising-left {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+
+  .marketing-advertising-title {
+    font-size: 62px;
+  }
+
+
+  .marketing-advertising-description {
+    font-size: 19px;
+  }
+
+
+  .marketing-advertising-nav {
+    padding-left: 42px;
+    padding-right: 42px;
+  }
+
+
+  .marketing-advertising-faq {
+    padding-left: 62px;
+    padding-right: 70px;
+  }
+
+
+  .marketing-advertising-faq-question {
+    font-size: 22px;
+  }
+
+
+  .marketing-advertising-faq-answer {
+    font-size: 18px;
+  }
+}
+
+
+/* =========================================================
+   LAPTOP
+   ========================================================= */
+
+@media (max-width: 1250px) {
+
+  .marketing-advertising-section {
+    grid-template-columns: 33% 67%;
+  }
+
+
+  .marketing-advertising-right {
+    grid-template-columns:
+      minmax(220px, 37%)
+      minmax(400px, 63%);
+  }
+
+
+  .marketing-advertising-left {
+    padding-left: 38px;
+    padding-right: 38px;
+  }
+
+
+  .marketing-advertising-title {
+    font-size: 48px;
+
+    letter-spacing: -1px;
+  }
+
+
+  .marketing-advertising-description {
+    font-size: 16px;
+  }
+
+
+  .marketing-advertising-nav {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+
+  .marketing-advertising-nav-item {
+    font-size: 16px;
+  }
+
+
+  .marketing-advertising-faq {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+
+
+  .marketing-advertising-faq-question {
+    font-size: 19px;
+  }
+
+
+  .marketing-advertising-faq-answer {
+    font-size: 16px;
+  }
+}
+
+
+/* =========================================================
+   1000px
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .marketing-advertising-section {
+    grid-template-columns: 34% 66%;
+  }
+
+
+  .marketing-advertising-right {
+    grid-template-columns:
+      minmax(205px, 38%)
+      minmax(350px, 62%);
+  }
+
+
+  .marketing-advertising-left {
+    padding: 38px 28px 55px;
+  }
+
+
+  .marketing-advertising-title {
+    font-size: 43px;
+  }
+
+
+  .marketing-advertising-description {
+    font-size: 15px;
+  }
+
+
+  .marketing-advertising-nav {
+    padding: 60px 20px 55px;
+  }
+
+
+  .marketing-advertising-nav-item {
+    font-size: 14px;
+
+    margin-bottom: 30px;
+  }
+
+
+  .marketing-advertising-faq {
+    padding: 60px 25px 55px;
+  }
+
+
+  .marketing-advertising-faq-question {
+    font-size: 17px;
+  }
+
+
+  .marketing-advertising-faq-answer {
+    font-size: 15px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .marketing-advertising-page {
+    padding-top: 60px;
+  }
+
+
+  .marketing-advertising-section {
+    display: block;
+
+    min-height: auto;
+  }
+
+
+  /* LEFT */
+
+  .marketing-advertising-left {
+    min-height: auto;
+
+    padding: 40px 28px 55px;
+  }
+
+
+  .marketing-advertising-brand {
+    font-size: 16px;
+
+    margin-bottom: 25px;
+  }
+
+
+  .marketing-advertising-image-wrap {
+    margin-bottom: 25px;
+  }
+
+
+  .marketing-advertising-image {
+    width: 180px;
+  }
+
+
+  .marketing-advertising-title {
+    font-size: clamp(42px, 12vw, 58px);
+
+    line-height: 0.95;
+  }
+
+
+  .marketing-advertising-description {
+    max-width: 500px;
+
+    font-size: 17px;
+  }
+
+
+  /* RIGHT */
+
+  .marketing-advertising-right {
+    display: block;
+  }
+
+
+  /* NAV */
+
+  .marketing-advertising-nav {
+    padding: 42px 28px;
+
+    border-right: none;
+
+    border-bottom: 1px solid #d5d5d5;
+  }
+
+
+  .marketing-advertising-nav-item {
+    font-size: 17px;
+
+    margin-bottom: 24px;
+  }
+
+
+  /* FAQ */
+
+  .marketing-advertising-faq {
+    padding: 42px 28px 60px;
+  }
+
+
+  .marketing-advertising-faq-question {
+    font-size: 19px;
+  }
+
+
+  .marketing-advertising-faq-answer {
+    font-size: 16px;
+
+    margin-top: 20px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .marketing-advertising-left {
+    padding: 35px 22px 45px;
+  }
+
+
+  .marketing-advertising-title {
+    font-size: 40px;
+  }
+
+
+  .marketing-advertising-description {
+    font-size: 16px;
+  }
+
+
+  .marketing-advertising-nav {
+    padding: 36px 22px;
+  }
+
+
+  .marketing-advertising-faq {
+    padding: 36px 22px 50px;
+  }
+
+
+  .marketing-advertising-faq-question {
+    font-size: 18px;
+  }
+}

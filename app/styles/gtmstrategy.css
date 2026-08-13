@@ -1,0 +1,686 @@
+/* =========================================================
+   IMAGENIE — GTM STRATEGY
+   Completely independent styles
+========================================================= */
+/* =====================================================
+   GTM PAGE — HEADER OFFSET
+   ===================================================== */
+
+.gtm-strategy-page {
+  padding-top: 50px;
+}
+
+
+/* =====================================================
+   GTM STRATEGY HERO
+   ===================================================== */
+
+.gtm-strategy-hero {
+  min-height: calc(100vh - 74px);
+}
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.gtm-strategy-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  color: #111111;
+}
+
+
+/* =========================================================
+   PAGE 01
+========================================================= */
+
+.gtm-strategy-hero {
+  display: grid;
+
+  grid-template-columns: 32% 68%;
+
+  width: 100%;
+  min-height: 100vh;
+
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   LEFT ORANGE PANEL
+========================================================= */
+
+.gtm-strategy-left {
+  position: relative;
+
+  min-height: 100vh;
+
+  padding: 45px 74px 55px;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  background: linear-gradient(
+    180deg,
+    #f6ad1b 0%,
+    #f7941d 100%
+  );
+}
+
+
+/* Decorative circle */
+
+.gtm-strategy-left::after {
+  content: "";
+
+  position: absolute;
+
+  width: 520px;
+  height: 520px;
+
+  right: -275px;
+  bottom: -270px;
+
+  border: 1px solid rgba(0, 0, 0, 0.15);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.gtm-strategy-logo {
+  position: relative;
+
+  z-index: 2;
+
+  color: #000000;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  letter-spacing: -0.03em;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.gtm-strategy-image-wrap {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+
+  margin-top: 24px;
+  margin-bottom: 32px;
+}
+
+
+.gtm-strategy-image {
+  display: block;
+
+  width: 250px;
+
+  max-width: 82%;
+
+  height: auto;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   PAGE NUMBER
+========================================================= */
+
+.gtm-strategy-number {
+  position: relative;
+
+  z-index: 2;
+
+  display: block;
+
+  margin-bottom: 16px;
+
+  color: #000000;
+
+  font-size: 14px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   MAIN TITLE
+========================================================= */
+
+.gtm-strategy-title {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  max-width: 430px;
+
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(
+    58px,
+    5.2vw,
+    92px
+  );
+
+  line-height: 0.88;
+
+  font-weight: 800;
+
+  letter-spacing: -0.055em;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.gtm-strategy-description {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  max-width: 390px;
+
+  margin: 36px 0 0;
+
+  color: #ffffff;
+
+  font-size: 19px;
+
+  line-height: 1.45;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   RIGHT WHITE AREA
+========================================================= */
+
+.gtm-strategy-right {
+  min-height: 100vh;
+
+  padding: 48px 62px 60px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   RIGHT CONTENT
+========================================================= */
+
+.gtm-strategy-content {
+  display: grid;
+
+  grid-template-columns: 37% 1px 63%;
+
+  width: 100%;
+
+  min-height: 100%;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.gtm-strategy-nav {
+  padding-right: 45px;
+}
+
+
+.gtm-strategy-nav-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 26px;
+
+  margin: 0;
+
+  padding: 0;
+
+  list-style: none;
+}
+
+
+.gtm-strategy-nav-item {
+  display: flex;
+
+  align-items: baseline;
+
+  gap: 8px;
+
+  color: #a9aaad;
+
+  font-size: 18px;
+
+  line-height: 1.25;
+
+  font-weight: 400;
+}
+
+
+.gtm-strategy-nav-number {
+  flex-shrink: 0;
+
+  min-width: 34px;
+
+  color: #a9aaad;
+
+  font-size: 14px;
+}
+
+
+.gtm-strategy-nav-item.active {
+  color: #111111;
+
+  font-weight: 700;
+}
+
+
+.gtm-strategy-nav-item.active
+.gtm-strategy-nav-number {
+  color: #f7941d;
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.gtm-strategy-divider {
+  width: 1px;
+
+  min-height: 100%;
+
+  background: #d8d8d8;
+}
+
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.gtm-strategy-faq {
+  padding-left: 55px;
+}
+
+
+.gtm-strategy-faq-item {
+  padding: 0 0 28px;
+
+  margin: 0 0 28px;
+
+  border-bottom: 1px solid #dddddd;
+}
+
+
+.gtm-strategy-faq-item:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   FAQ QUESTION
+========================================================= */
+
+.gtm-strategy-faq-question {
+  margin: 0 0 17px;
+
+  color: #111111;
+
+  font-size: 19px;
+
+  line-height: 1.25;
+
+  font-weight: 700;
+
+  letter-spacing: -0.02em;
+}
+
+
+/* =========================================================
+   FAQ ANSWER
+========================================================= */
+
+.gtm-strategy-faq-answer {
+  width: 100%;
+
+  max-width: 650px;
+
+  margin: 0;
+
+  color: #454545;
+
+  font-size: 17px;
+
+  line-height: 1.45;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   FAQ LINK
+========================================================= */
+
+.gtm-strategy-faq-link {
+  display: inline-block;
+
+  margin-top: 8px;
+
+  color: #315eff;
+
+  font-size: 14px;
+
+  text-decoration: none;
+}
+
+
+.gtm-strategy-faq-link:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   PAGE 02 — GTM TIMELINE
+========================================================= */
+
+.gtm-timeline-section {
+  width: 100%;
+
+  min-height: 100vh;
+
+  padding: 80px 5vw;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+}
+
+
+.gtm-timeline-image-wrap {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+}
+
+
+.gtm-timeline-image {
+  display: block;
+
+  width: 100%;
+
+  max-width: 1500px;
+
+  height: auto;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   LARGE SCREEN
+========================================================= */
+
+@media (min-width: 1600px) {
+
+  .gtm-strategy-left {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  .gtm-strategy-right {
+    padding-left: 65px;
+    padding-right: 75px;
+  }
+
+  .gtm-strategy-image {
+    width: 270px;
+  }
+
+  .gtm-strategy-description {
+    font-size: 20px;
+  }
+
+  .gtm-strategy-nav-item {
+    font-size: 19px;
+  }
+
+  .gtm-strategy-faq-question {
+    font-size: 20px;
+  }
+
+  .gtm-strategy-faq-answer {
+    font-size: 18px;
+  }
+}
+
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .gtm-strategy-left {
+    padding: 42px 52px 50px;
+  }
+
+  .gtm-strategy-right {
+    padding: 42px 45px 50px;
+  }
+
+  .gtm-strategy-content {
+    grid-template-columns: 36% 1px 64%;
+  }
+
+  .gtm-strategy-nav {
+    padding-right: 35px;
+  }
+
+  .gtm-strategy-faq {
+    padding-left: 38px;
+  }
+
+  .gtm-strategy-nav-item {
+    font-size: 16px;
+  }
+
+  .gtm-strategy-description {
+    font-size: 17px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .gtm-strategy-hero {
+    grid-template-columns: 1fr;
+  }
+
+
+  .gtm-strategy-left {
+    min-height: auto;
+
+    padding: 55px 40px 65px;
+  }
+
+
+  .gtm-strategy-left::after {
+    right: -280px;
+    bottom: -280px;
+  }
+
+
+  .gtm-strategy-image {
+    width: 230px;
+  }
+
+
+  .gtm-strategy-title {
+    font-size: 72px;
+  }
+
+
+  .gtm-strategy-description {
+    max-width: 550px;
+  }
+
+
+  .gtm-strategy-right {
+    min-height: auto;
+
+    padding: 55px 40px;
+  }
+
+
+  .gtm-strategy-content {
+    grid-template-columns: 1fr;
+  }
+
+
+  .gtm-strategy-divider {
+    display: none;
+  }
+
+
+  .gtm-strategy-nav {
+    padding-right: 0;
+
+    padding-bottom: 45px;
+
+    border-bottom: 1px solid #dddddd;
+  }
+
+
+  .gtm-strategy-faq {
+    padding-left: 0;
+
+    padding-top: 45px;
+  }
+
+
+  .gtm-timeline-section {
+    padding: 50px 30px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .gtm-strategy-left {
+    padding: 40px 25px 50px;
+  }
+
+
+  .gtm-strategy-logo {
+    font-size: 12px;
+  }
+
+
+  .gtm-strategy-image {
+    width: 190px;
+  }
+
+
+  .gtm-strategy-image-wrap {
+    margin-top: 25px;
+
+    margin-bottom: 28px;
+  }
+
+
+  .gtm-strategy-title {
+    font-size: 58px;
+
+    line-height: 0.9;
+  }
+
+
+  .gtm-strategy-description {
+    margin-top: 28px;
+
+    font-size: 16px;
+
+    line-height: 1.5;
+  }
+
+
+  .gtm-strategy-right {
+    padding: 40px 25px;
+  }
+
+
+  .gtm-strategy-nav-list {
+    gap: 20px;
+  }
+
+
+  .gtm-strategy-nav-item {
+    font-size: 16px;
+  }
+
+
+  .gtm-strategy-faq {
+    padding-top: 35px;
+  }
+
+
+  .gtm-strategy-faq-question {
+    font-size: 18px;
+  }
+
+
+  .gtm-strategy-faq-answer {
+    font-size: 16px;
+  }
+
+
+  .gtm-timeline-section {
+    padding: 35px 15px;
+  }
+}

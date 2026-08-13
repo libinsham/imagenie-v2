@@ -1,0 +1,954 @@
+/* =========================================================
+   ABOUT HERO
+========================================================= */
+
+.about-hero {
+  width: 100%;
+  background: #111;
+  padding: 140px 0 90px;
+  overflow: hidden;
+}
+
+.about-hero__grid {
+   width: min(1200px, calc(100% - 80px));
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.about-hero__eyebrow {
+  display: inline-block;
+
+  margin-bottom: 20px;
+
+  color: #ee9a21;
+
+  font-family: MontLight, sans-serif;
+  font-size: 15px;
+
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.about-hero__title {
+  margin: 0 0 30px;
+
+  color: #fff;
+
+  font-family: MontLight, sans-serif;
+  font-size: clamp(52px, 6vw, 86px);
+
+  font-weight: 700 !important;
+  line-height: 1;
+text-align: center;
+  letter-spacing: -2px;
+}
+
+.about-hero__title span {
+  color: #ee9a21;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.about-hero__description {
+  max-width: 100%;
+
+  margin: 0 0 50px;
+
+  color: #bdbdbd;
+
+  font-family: MontLight, sans-serif;
+  font-size: 21px;
+text-align: center;
+  line-height: 1.75;
+}
+
+.about-hero__description strong {
+  color: #fff;
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   ABOUT POINTS
+========================================================= */
+
+.about-points {
+  display: grid;
+
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+
+  gap: 30px 35px;
+}
+
+.about-point {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 18px;
+}
+
+
+/* =========================================================
+   ABOUT ICON
+========================================================= */
+
+.about-icon {
+  flex: 0 0 54px;
+
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(238, 154, 33, 0.7);
+
+  border-radius: 50%;
+
+  color: #ee9a21;
+
+  font-size: 22px;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.about-point:hover .about-icon {
+  background: #ee9a21;
+
+  color: #000;
+
+  transform: scale(1.08);
+}
+
+
+/* =========================================================
+   POINT TITLE
+========================================================= */
+
+.about-point h4 {
+  margin: 0 0 8px;
+
+  color: #fff;
+
+  font-family: MontLight, sans-serif;
+  font-size: 22px;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   POINT DESCRIPTION
+========================================================= */
+
+.about-point p {
+  margin: 0;
+
+  color: #999;
+
+  font-family: MontLight, sans-serif;
+  font-size: 16px;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   HERO IMAGE
+========================================================= */
+
+.about-hero__image {
+  width: 100%;
+
+  position: relative;
+}
+
+.about-hero__image img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  border-radius: 28px;
+
+  object-fit: cover;
+}
+
+
+/* =========================================================
+   COMPANY STATS
+========================================================= */
+
+.about-stats {
+  width: min(1400px, calc(100% - 80px));
+
+  margin: 100px auto 0;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+  padding-top: 60px;
+}
+
+
+/* =========================================================
+   STAT
+========================================================= */
+
+.about-stat {
+  position: relative;
+
+  text-align: center;
+
+  padding: 0 25px;
+}
+
+.about-stat:not(:last-child)::after {
+  content: "";
+
+  position: absolute;
+
+  top: 5px;
+  right: 0;
+
+  width: 1px;
+  height: 70px;
+
+  background: rgba(255, 255, 255, 0.12);
+}
+
+
+/* =========================================================
+   STAT NUMBER
+========================================================= */
+
+.about-stat h2 {
+  margin: 0;
+
+  color: #fff;
+
+  font-family: MontLight, sans-serif;
+
+  font-size: clamp(48px, 5vw, 70px);
+
+  font-weight: 400;
+
+  line-height: 1;
+}
+
+
+/* =========================================================
+   STAT LABEL
+========================================================= */
+
+.about-stat p {
+  margin: 14px 0 0;
+
+  color: #999;
+
+  font-family: MontLight, sans-serif;
+
+  font-size: 17px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   ABOUT CONTENT SECTIONS
+========================================================= */
+
+.about-hero + .c-text-text,
+.about-hero + section {
+  width: 100%;
+}
+
+
+/* =========================================================
+   ABOUT STATS SECTION
+   For future / additional stats section
+========================================================= */
+
+.about-stats-section {
+  width: 100%;
+
+  background: #fff;
+
+  padding: 110px 0;
+}
+
+.about-stats-header {
+  width: min(900px, calc(100% - 40px));
+
+  margin: 0 auto 70px;
+
+  text-align: center;
+}
+
+.about-stats-title {
+  margin: 0 0 20px;
+
+  color: #111;
+
+  font-family: MontLight, sans-serif;
+
+  font-size: 64px;
+
+  font-weight: 400;
+
+  line-height: 1.1;
+}
+
+.about-stats-description {
+  max-width: 850px;
+
+  margin: 0 auto;
+
+  color: #666;
+
+  font-family: MontLight, sans-serif;
+
+  font-size: 22px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   ADDITIONAL STAT CARD
+========================================================= */
+
+.about-stat-card {
+  padding: 30px 20px;
+
+  text-align: center;
+}
+
+.about-stat-card h2 {
+  margin: 0 0 12px;
+
+  color: #111;
+
+  font-family: MontLight, sans-serif;
+
+  font-size: 72px;
+
+  font-weight: 700;
+
+  line-height: 1;
+}
+
+.about-stat-card p {
+  margin: 0;
+
+  color: #666;
+
+  font-family: MontLight, sans-serif;
+
+  font-size: 20px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   TABLET — 1100px
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .about-hero__grid {
+    gap: 50px;
+  }
+
+  .about-points {
+    grid-template-columns: 1fr;
+  }
+
+  .about-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    row-gap: 50px;
+  }
+
+  .about-stat:nth-child(2)::after {
+    display: none;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET — 991px
+========================================================= */
+
+@media (max-width: 991px) {
+
+  .about-hero {
+    padding: 120px 0 80px;
+  }
+
+  .about-hero__grid {
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+  }
+
+  .about-hero__content {
+   width: 100%;
+  max-width: 1000px;
+  text-align: center;
+  }
+
+  .about-hero__image {
+    max-width: 850px;
+
+    margin: 0 auto;
+  }
+
+  .about-hero__description {
+    font-size: 20px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE — 768px
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .about-hero {
+    padding: 100px 0 70px;
+  }
+
+  .about-hero__grid {
+    width: calc(100% - 40px);
+
+    gap: 45px;
+  }
+
+  .about-hero__title {
+    font-size: 48px;
+
+    letter-spacing: -1px;
+  }
+
+  .about-hero__description {
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    margin-bottom: 40px;
+  }
+
+  .about-points {
+    gap: 25px;
+  }
+
+  .about-point h4 {
+    font-size: 20px;
+  }
+
+  .about-point p {
+    font-size: 15px;
+  }
+
+  .about-stats {
+    width: calc(100% - 40px);
+
+    margin-top: 70px;
+
+    padding-top: 45px;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 40px 0;
+  }
+
+  .about-stat {
+    padding: 0 15px;
+  }
+
+  .about-stat:nth-child(2)::after {
+    display: none;
+  }
+
+  .about-stat:nth-child(1)::after,
+  .about-stat:nth-child(3)::after {
+    display: block;
+  }
+
+  .about-stat h2 {
+    font-size: 48px;
+  }
+
+  .about-stat p {
+    font-size: 15px;
+  }
+
+  .about-stats-title {
+    font-size: 44px;
+  }
+
+  .about-stats-description {
+    font-size: 18px;
+  }
+
+  .about-stat-card h2 {
+    font-size: 56px;
+  }
+
+  .about-stat-card p {
+    font-size: 18px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE — 560px
+========================================================= */
+
+@media (max-width: 560px) {
+
+  .about-hero {
+    padding: 90px 0 60px;
+  }
+
+  .about-hero__grid {
+    width: calc(100% - 30px);
+  }
+
+  .about-hero__title {
+    font-size: 42px;
+  }
+
+  .about-hero__description {
+    font-size: 17px;
+  }
+
+  .about-points {
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+  }
+
+  .about-point {
+    gap: 14px;
+  }
+
+  .about-icon {
+    flex-basis: 48px;
+
+    width: 48px;
+    height: 48px;
+
+    font-size: 19px;
+  }
+
+  .about-stats {
+    width: calc(100% - 30px);
+
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+  .about-stat {
+    padding: 0 10px;
+  }
+
+  .about-stat::after {
+    display: none !important;
+  }
+
+  .about-stat h2 {
+    font-size: 46px;
+  }
+
+  .about-stat p {
+    font-size: 15px;
+  }
+
+  .about-stats-section {
+    padding: 80px 20px;
+  }
+
+  .about-stats-title {
+    font-size: 38px;
+  }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .about-icon {
+    transition: none;
+  }
+
+}
+
+/* =========================================================
+   ABOUT — OUR CLIENTELE
+========================================================= */
+
+.about-clientele {
+  width: 100%;
+
+  background: #fff;
+
+  color: #111;
+
+  padding: 95px 0 100px;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.about-clientele__container {
+  width: min(1320px, calc(100% - 100px));
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.about-clientele__header {
+  text-align: center;
+
+  margin-bottom: 65px;
+}
+
+
+.about-clientele__eyebrow {
+  display: block;
+
+  margin-bottom: 16px;
+
+  color: #ee8b16;
+
+  font-family: MontLight, sans-serif;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  letter-spacing: 5px;
+
+  text-transform: uppercase;
+}
+
+
+.about-clientele__title {
+  margin: 0;
+
+  color: #111;
+
+  font-family: MontLight, sans-serif;
+
+  font-size: 52px;
+
+  font-weight: 600;
+
+  line-height: 1.1;
+
+  letter-spacing: -1.5px;
+}
+
+
+.about-clientele__description {
+  margin: 16px 0 0;
+
+  color: #444;
+
+  font-family: MontLight, sans-serif;
+
+  font-size: 21px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   LOGO GRID
+========================================================= */
+
+.about-clientele__logos {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(6, 1fr);
+
+  align-items: center;
+
+  justify-items: center;
+
+  column-gap: 45px;
+
+  row-gap: 45px;
+
+  padding: 25px 0;
+}
+
+
+/* =========================================================
+   LOGO ITEM
+========================================================= */
+
+.about-clientele__logo {
+
+  width: 100%;
+
+  height: 105px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 10px;
+}
+
+
+/* =========================================================
+   LOGO IMAGE
+========================================================= */
+
+.about-clientele__logo img {
+
+  display: block;
+
+  width: auto;
+
+  max-width: 100%;
+
+  max-height: 82px;
+
+  object-fit: contain;
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.about-clientele__logo:hover img {
+
+  transform: scale(1.06);
+
+}
+
+
+/* =========================================================
+   LARGE LOGOS
+========================================================= */
+
+/* UNDP */
+.about-clientele__logo:nth-child(1) img {
+  max-width: 175px;
+}
+
+/* Suvien */
+.about-clientele__logo:nth-child(2) img {
+  max-width: 125px;
+}
+
+/* ISG */
+.about-clientele__logo:nth-child(3) img {
+  max-width: 155px;
+}
+
+/* Third Eye */
+.about-clientele__logo:nth-child(4) img {
+  max-width: 160px;
+}
+
+/* Microland */
+.about-clientele__logo:nth-child(5) img {
+  max-width: 175px;
+}
+
+/* t-hub */
+.about-clientele__logo:nth-child(6) img {
+  max-width: 165px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .about-clientele {
+    padding: 80px 0 85px;
+  }
+
+  .about-clientele__container {
+    width: min(900px, calc(100% - 70px));
+  }
+
+  .about-clientele__header {
+    margin-bottom: 50px;
+  }
+
+  .about-clientele__title {
+    font-size: 44px;
+  }
+
+  .about-clientele__logos {
+
+    grid-template-columns:
+      repeat(3, 1fr);
+
+    column-gap: 35px;
+
+    row-gap: 35px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .about-clientele {
+    padding: 65px 0 70px;
+  }
+
+  .about-clientele__container {
+    width: calc(100% - 40px);
+  }
+
+  .about-clientele__header {
+    margin-bottom: 40px;
+  }
+
+  .about-clientele__eyebrow {
+    font-size: 12px;
+
+    letter-spacing: 3.5px;
+
+    margin-bottom: 12px;
+  }
+
+  .about-clientele__title {
+    font-size: 34px;
+
+    letter-spacing: -0.8px;
+  }
+
+  .about-clientele__description {
+    font-size: 18px;
+
+    margin-top: 12px;
+  }
+
+  .about-clientele__logos {
+
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    column-gap: 20px;
+
+    row-gap: 25px;
+
+    padding: 10px 0;
+  }
+
+  .about-clientele__logo {
+
+    height: 85px;
+
+    padding: 8px;
+  }
+
+  .about-clientele__logo img {
+
+    max-height: 65px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .about-clientele__container {
+    width: calc(100% - 28px);
+  }
+
+  .about-clientele__title {
+    font-size: 30px;
+  }
+
+  .about-clientele__description {
+    font-size: 16px;
+  }
+
+  .about-clientele__logos {
+    column-gap: 10px;
+    row-gap: 20px;
+  }
+
+  .about-clientele__logo {
+    height: 75px;
+  }
+
+  .about-clientele__logo img {
+    max-width: 120px;
+    max-height: 55px;
+  }
+
+}

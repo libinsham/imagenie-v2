@@ -1,0 +1,811 @@
+/* =========================================================
+   B2B CASE STUDIES PAGE
+   ========================================================= */
+
+.case-studies-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #000;
+  color: #fff;
+
+  /* Space for fixed header */
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   HEADER FIX
+   ========================================================= */
+
+/*
+   IMPORTANT:
+   Your original .c-header was position: fixed but did not
+   have top/left values. This caused the header to appear
+   in the middle of the page.
+*/
+
+
+
+
+/* Header background */
+
+.c-header .is-background {
+  position: absolute !important;
+
+  top: 0 !important;
+  left: 0 !important;
+
+  width: 100% !important;
+  height: 100% !important;
+
+  background: #000 !important;
+
+  transform: none !important;
+
+  z-index: -1 !important;
+}
+
+
+/* Header main container */
+
+.c-header__container {
+  width: 100% !important;
+  max-width: 150em !important;
+
+  height: 64px !important;
+
+  margin: 0 auto !important;
+  padding: 0 !important;
+
+  position: relative !important;
+
+  z-index: 10002 !important;
+}
+
+
+/* Header content */
+
+.c-header__content {
+  width: 100% !important;
+  height: 64px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+
+  padding: 0 !important;
+
+  flex-wrap: nowrap !important;
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.c-header__branding {
+  display: flex !important;
+  align-items: center !important;
+
+  margin-left: 50px !important;
+
+  height: 64px !important;
+
+  overflow: visible !important;
+
+  flex-shrink: 0 !important;
+
+  z-index: 10003 !important;
+}
+
+.c-header__branding a {
+  display: inline-flex !important;
+
+  align-items: center !important;
+  justify-content: center !important;
+
+  width: auto !important;
+  height: auto !important;
+
+  overflow: visible !important;
+
+  text-decoration: none !important;
+}
+
+.c-header__branding img {
+  display: block !important;
+
+  width: 180px !important;
+  min-width: 180px !important;
+  max-width: 180px !important;
+
+  height: auto !important;
+
+  opacity: 1 !important;
+  visibility: visible !important;
+
+  position: relative !important;
+
+  object-fit: contain !important;
+
+  flex-shrink: 0 !important;
+
+  z-index: 10004 !important;
+}
+
+
+/* =========================================================
+   PRIMARY NAV
+   ========================================================= */
+
+.c-header__primary-nav {
+  display: none !important;
+}
+
+
+/* =========================================================
+   MENU BUTTON
+   ========================================================= */
+
+.c-header__burger {
+  height: 64px !important;
+
+  display: flex !important;
+  align-items: center !important;
+
+  margin-left: auto !important;
+
+  z-index: 10004 !important;
+}
+
+.c-header__burger button {
+  height: 64px !important;
+
+  min-width: 150px;
+
+  padding: 0 32px !important;
+
+  margin: 0 !important;
+
+  border: 0 !important;
+
+  background: #151515 !important;
+
+  color: #fff !important;
+
+  display: flex !important;
+
+  align-items: center !important;
+  justify-content: center !important;
+
+  gap: 8px;
+
+  cursor: pointer;
+
+  font-family: MontRegular, sans-serif;
+
+  font-size: 18px;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.c-header__burger button:hover {
+  background: #fff !important;
+  color: #000 !important;
+}
+
+.c-header__burger button svg {
+  width: 24px !important;
+  height: 24px !important;
+
+  margin: 0 !important;
+
+  fill: #fff !important;
+}
+
+.c-header__burger button:hover svg {
+  fill: #000 !important;
+}
+
+.c-header__burger button span {
+  display: block !important;
+}
+
+
+/* =========================================================
+   SECONDARY / OFF-CANVAS MENU
+   ========================================================= */
+
+.c-header__secondary-nav {
+  position: fixed !important;
+
+  top: 64px !important;
+  right: 0 !important;
+
+  width: 100% !important;
+  max-width: 100% !important;
+
+  height: calc(100vh - 64px) !important;
+
+  background: #000 !important;
+
+  transform: translateX(100%) !important;
+
+  transition: transform 0.3s ease !important;
+
+  z-index: 10000 !important;
+
+  overflow-y: auto !important;
+}
+
+.c-header__secondary-nav.is-open {
+  transform: translateX(0) !important;
+}
+
+
+/* Menu container */
+
+.c-header__secondary-nav__container {
+  width: 100% !important;
+
+  padding: 0 !important;
+
+  overflow: visible !important;
+}
+
+
+/* Menu list */
+
+.c-header__secondary-nav__container #menu-secondary {
+  width: 100% !important;
+
+  min-height: calc(100vh - 64px);
+
+  margin: 0 !important;
+
+  padding: 60px 60px 80px !important;
+
+  list-style: none !important;
+
+  background: #000 !important;
+}
+
+
+/* Main menu items */
+
+.c-header__secondary-nav__container #menu-secondary > li {
+  padding: 0 !important;
+
+  margin: 0 !important;
+
+  line-height: 1.2 !important;
+}
+
+.c-header__secondary-nav__container #menu-secondary > li > a {
+  display: block !important;
+
+  padding: 14px 0 !important;
+
+  color: #fff !important;
+
+  font-family: MontSemiBold, sans-serif;
+
+  font-size: clamp(28px, 3vw, 48px) !important;
+
+  text-decoration: none !important;
+}
+
+.c-header__secondary-nav__container #menu-secondary > li > a:hover {
+  color: #ee9a21 !important;
+}
+
+
+/* =========================================================
+   CASE STUDIES CONTENT
+   ========================================================= */
+
+.b2b-case-studies-container {
+  width: min(1380px, calc(100% - 80px));
+
+  margin: 0 auto;
+
+  position: relative;
+
+  z-index: 1;
+}
+
+
+/* =========================================================
+   CASE STUDIES HEADER
+   ========================================================= */
+
+.b2b-case-studies-header {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 50px;
+
+  margin-bottom: 60px;
+}
+
+.b2b-case-studies-header > div {
+  min-width: 0;
+}
+
+.b2b-case-studies-eyebrow {
+  display: block;
+
+  margin-bottom: 20px;
+
+  color: #ee9a21;
+
+  font-family: MontSemiBold, sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.2;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+
+.b2b-case-studies-header h2 {
+  margin: 0 !important;
+
+  color: #fff !important;
+
+  font-family: MontLight, sans-serif !important;
+
+  font-size: clamp(48px, 5vw, 76px) !important;
+
+  font-weight: 400 !important;
+
+  line-height: 0.98 !important;
+
+  letter-spacing: -3px !important;
+}
+
+
+.b2b-case-studies-header p {
+  max-width: 760px;
+
+  margin: 25px 0 0 !important;
+
+  color: #999 !important;
+
+  font-family: MontRegular, sans-serif;
+
+  font-size: 18px !important;
+
+  line-height: 1.6 !important;
+}
+
+
+/* =========================================================
+   VIEW ALL
+   ========================================================= */
+
+.b2b-case-studies-view-all {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  min-width: 120px;
+
+  padding: 16px 24px;
+
+  border: 1px solid #444;
+
+  color: #fff !important;
+
+  font-family: MontRegular, sans-serif;
+
+  font-size: 14px;
+
+  text-decoration: none !important;
+
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.b2b-case-studies-view-all:hover {
+  background: #ee9a21;
+
+  border-color: #ee9a21;
+
+  color: #000 !important;
+}
+
+
+/* =========================================================
+   GRID
+   ========================================================= */
+
+.b2b-case-studies-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 24px;
+
+  width: 100%;
+}
+
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.b2b-case-card {
+  min-width: 0;
+
+  overflow: hidden;
+
+  background: #171717;
+
+  border: 1px solid #292929;
+
+  border-radius: 16px;
+
+  color: #fff;
+
+  position: relative;
+}
+
+
+/* =========================================================
+   IMAGE SLIDER
+   ========================================================= */
+
+.b2b-case-card-image {
+  position: relative;
+
+  width: 100%;
+
+  height: 500px;
+
+  overflow: hidden;
+
+  background: #101010;
+}
+
+
+.b2b-case-card-slide {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transition:
+    opacity 0.5s ease,
+    visibility 0.5s ease;
+}
+
+.b2b-case-card-slide.is-active {
+  opacity: 1;
+
+  visibility: visible;
+
+  z-index: 1;
+}
+
+
+.b2b-case-card-slide img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block;
+}
+
+/* =========================================================
+   ARROWS
+   ========================================================= */
+
+.b2b-case-card-arrow {
+  position: absolute;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 42px;
+  height: 42px;
+
+  border: 1px solid rgba(255, 255, 255, 0.5);
+
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.45);
+
+  color: #fff;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  z-index: 5;
+
+  opacity: 0;
+
+  transition:
+    opacity 0.25s ease,
+    background 0.25s ease;
+}
+
+.b2b-case-card-image:hover .b2b-case-card-arrow {
+  opacity: 1;
+}
+
+.b2b-case-card-arrow:hover {
+  background: #ee9a21;
+
+  border-color: #ee9a21;
+
+  color: #000;
+}
+
+.b2b-case-card-arrow--prev {
+  left: 15px;
+}
+
+.b2b-case-card-arrow--next {
+  right: 15px;
+}
+
+
+/* =========================================================
+   DOTS
+   ========================================================= */
+
+.b2b-case-card-dots {
+  position: absolute;
+
+  bottom: 15px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  z-index: 6;
+}
+
+.b2b-case-card-dot {
+  width: 7px;
+  height: 7px;
+
+  padding: 0;
+
+  border: 0;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.45);
+
+  cursor: pointer;
+
+  transition:
+    width 0.2s ease,
+    background 0.2s ease;
+}
+
+.b2b-case-card-dot.is-active {
+  width: 24px;
+
+  border-radius: 20px;
+
+  background: #ee9a21;
+}
+
+
+/* =========================================================
+   CARD CONTENT
+   ========================================================= */
+
+.b2b-case-card-content {
+  min-height: 210px;
+
+  padding: 28px 28px 32px;
+}
+
+.b2b-case-card-category {
+  display: block;
+
+  margin-bottom: 16px;
+
+  color: #ee9a21;
+
+  font-family: MontSemiBold, sans-serif;
+
+  font-size: 12px;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+}
+
+.b2b-case-card-content h3 {
+  margin: 0 0 14px !important;
+
+  color: #fff !important;
+
+  font-family: MontLight, sans-serif !important;
+
+  font-size: 28px !important;
+
+  line-height: 1.1 !important;
+
+  font-weight: 400 !important;
+}
+
+.b2b-case-card-content p {
+  margin: 0 0 25px !important;
+
+  color: #999 !important;
+
+  font-size: 15px !important;
+
+  line-height: 1.5 !important;
+}
+
+.b2b-case-card-link {
+  color: #fff !important;
+
+  font-size: 14px;
+
+  text-decoration: none !important;
+
+  transition: color 0.2s ease;
+}
+
+.b2b-case-card-link:hover {
+  color: #ee9a21 !important;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1200px) {
+  .b2b-case-studies-container {
+    width: min(1100px, calc(100% - 60px));
+  }
+
+  .b2b-case-studies-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .b2b-case-card-image {
+    height: 520px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .case-studies-page {
+    padding-top: 95px;
+    padding-bottom: 80px;
+  }
+
+  .c-header {
+    height: 60px !important;
+  }
+
+  .c-header__container,
+  .c-header__content {
+    height: 60px !important;
+  }
+
+  .c-header__branding {
+    height: 60px !important;
+
+    margin-left: 20px !important;
+  }
+
+  .c-header__branding img {
+    width: 140px !important;
+    min-width: 140px !important;
+    max-width: 140px !important;
+  }
+
+  .c-header__burger {
+    height: 60px !important;
+  }
+
+  .c-header__burger button {
+    height: 60px !important;
+
+    min-width: 110px;
+
+    padding: 0 18px !important;
+
+    font-size: 16px;
+  }
+
+  .c-header__secondary-nav {
+    top: 60px !important;
+
+    height: calc(100vh - 60px) !important;
+  }
+
+  .b2b-case-studies-container {
+    width: calc(100% - 40px);
+  }
+
+  .b2b-case-studies-header {
+    display: block;
+
+    margin-bottom: 40px;
+  }
+
+  .b2b-case-studies-header h2 {
+    font-size: clamp(42px, 12vw, 62px) !important;
+
+    letter-spacing: -2px !important;
+  }
+
+  .b2b-case-studies-header p {
+    font-size: 16px !important;
+
+    margin-top: 20px !important;
+  }
+
+  .b2b-case-studies-view-all {
+    margin-top: 25px;
+  }
+
+  .b2b-case-studies-grid {
+    grid-template-columns: 1fr;
+
+    gap: 24px;
+  }
+
+  .b2b-case-card-image {
+    height: min(130vw, 600px);
+  }
+}
+
+
+@media (max-width: 480px) {
+  .b2b-case-studies-container {
+    width: calc(100% - 30px);
+  }
+
+  .b2b-case-card-image {
+    height: 470px;
+  }
+
+  .b2b-case-card-content {
+    padding: 24px;
+  }
+}
